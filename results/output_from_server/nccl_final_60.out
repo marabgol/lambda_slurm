@@ -1,0 +1,4 @@
+srun: error: node-01: task 0: Exited with exit code 127
+0: /usr/bin/bash: line 4: -b: command not found
+1: /usr/bin/bash: line 4: -b: command not found
+srun: error: node-02: task 1: Exited with exit code 127

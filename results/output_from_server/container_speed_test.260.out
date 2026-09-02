@@ -1,0 +1,4 @@
+/lambda/nfs/AIML/nccl-tests/build/all_reduce_perf: error while loading shared libraries: libmpi.so.40: cannot open shared object file: No such file or directory
+srun: error: node-02: task 1: Exited with exit code 127
+slurmstepd: error: *** JOB 260 ON node-01 CANCELLED AT 2026-01-13T05:21:48 ***
+slurmstepd: error: *** STEP 260.1 ON node-01 CANCELLED AT 2026-01-13T05:21:48 ***

@@ -1,0 +1,832 @@
+==========================================
+NCCL Test - Multi-Node GPU Communication
+==========================================
+Job ID: 160
+Nodes Requested: 2
+Nodes Assigned: node-01,node-02
+Start time: Sat Jan  3 03:26:45 PM UTC 2026
+
+==========================================
+Running NCCL All-Reduce Test on 2 Nodes
+==========================================
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 2147483648 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 2147483648 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  17805 on    node-02 device  0 [0000:07:00] NVIDIA A100-SXM4-40GB
+#  Rank  0 Group  0 Pid  19159 on    node-01 device  0 [0000:07:00] NVIDIA A10
+node-01:19159:19159 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-01:19159:19159 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.3<0>
+node-02:17805:17805 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-02:17805:17805 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.4<0>
+node-01:19159:19159 [0] NCCL INFO cudaDriverVersion 12080
+node-01:19159:19159 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-02:17805:17805 [0] NCCL INFO cudaDriverVersion 12080
+node-02:17805:17805 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-01:19159:19166 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-01:19159:19166 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-01:19159:19166 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-01:19159:19166 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-01:19159:19166 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-01:19159:19166 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB wg0:192.168.37.3<0>
+node-01:19159:19166 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-01:19159:19166 [0] NCCL INFO Using network IBext_v10
+node-01:19159:19166 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-01:19159:19166 [0] NCCL INFO ncclCommInitRankConfig comm 0x5c4cb32e5b50 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0x31200e4624df1aaa - Init START
+node-01:19159:19166 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-01:19159:19166 [0] NCCL INFO Bootstrap timings total 0.000773 (create 0.000028, send 0.000105, recv 0.000396, ring 0.000001, delay 0.000000)
+node-01:19159:19166 [0] NCCL INFO comm 0x5c4cb32e5b50 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+node-01:19159:19166 [0] NCCL INFO Channel 00/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 01/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 02/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 03/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 04/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 05/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 06/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 07/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 08/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 09/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 10/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 11/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 12/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 13/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 14/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 15/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 16/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 17/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 18/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 19/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 20/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 21/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 22/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 23/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 24/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 25/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 26/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 27/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 28/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 29/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 30/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 31/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 32/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 33/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 34/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 35/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 36/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 37/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 38/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 39/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 40/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 41/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 42/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 43/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 44/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 45/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 46/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 47/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 48/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 49/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 50/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 51/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 52/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 53/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 54/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 55/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 56/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 57/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 58/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 59/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 60/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 61/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 62/64 : 0
+node-01:19159:19166 [0] NCCL INFO Channel 63/64 : 0
+node-01:19159:19166 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1 [32] -1/-1/-1->0->-1 [33] -1/-1/-1->0->-1 [34] -1/-1/-1->0->-1 [35] -1/-1/-1->0->-1 [36] -1/-1/-1->0->-1 [37] -1/-1/-1->0->-1 [38] -1/-1/-1->0->-1 [39] -1/-1/-1->0->-1 [40] -1/-1/-1->0->-1 [41] -1/-1/-1->0->-1 [42] -1/-1/-1->0->-1 [43] -1/-1/-1->0->-1 [44] -1/-1/-1->0->-1 [45] -1/-1/-1->0->-1 [46] -1/-1/-1->0->-1 [47] -
+node-01:19159:19166 [0] NCCL INFO P2P Chunksize set to 524288
+node-01:19159:19166 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-01:19159:19169 [0] NCCL INFO [Proxy Service] Device 0 CPU core 7
+node-01:19159:19170 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 8
+node-01:19159:19166 [0] NCCL INFO 64 coll channels, 64 collnet channels, 0 nvls channels, 64 p2p channels, 64 p2p channels per peer
+node-01:19159:19166 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:19159:19166 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-01:19159:19166 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-01:19159:19166 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-01:19159:19166 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-01:19159:19166 [0] NCCL INFO ncclCommInitRankConfig comm 0x5c4cb32e5b50 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0x31200e4624df1aaa - Init COMPLETE
+node-01:19159:19166 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 1 total 0.25 (kernels 0.18, alloc 0.06, bootstrap 0.00, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.01, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong 
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)         
+node-02:17805:17812 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-02:17805:17812 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-02:17805:17812 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-02:17805:17812 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-02:17805:17812 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-02:17805:17812 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB wg0:192.168.37.4<0>
+node-02:17805:17812 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-02:17805:17812 [0] NCCL INFO Using network IBext_v10
+node-02:17805:17812 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-02:17805:17812 [0] NCCL INFO ncclCommInitRankConfig comm 0x5a431acc4510 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0x1133b88475aad483 - Init START
+node-02:17805:17812 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-02:17805:17812 [0] NCCL INFO Bootstrap timings total 0.000934 (create 0.000037, send 0.000164, recv 0.000275, ring 0.000001, delay 0.000000)
+node-02:17805:17812 [0] NCCL INFO comm 0x5a431acc4510 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+node-02:17805:17812 [0] NCCL INFO Channel 00/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 01/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 02/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 03/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 04/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 05/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 06/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 07/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 08/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 09/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 10/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 11/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 12/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 13/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 14/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 15/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 16/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 17/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 18/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 19/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 20/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 21/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 22/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 23/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 24/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 25/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 26/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 27/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 28/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 29/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 30/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 31/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 32/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 33/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 34/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 35/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 36/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 37/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 38/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 39/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 40/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 41/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 42/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 43/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 44/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 45/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 46/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 47/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 48/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 49/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 50/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 51/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 52/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 53/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 54/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 55/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 56/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 57/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 58/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 59/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 60/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 61/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 62/64 : 0
+node-02:17805:17812 [0] NCCL INFO Channel 63/64 : 0
+node-02:17805:17812 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1 [32] -1/-1/-1->0->-1 [33] -1/-1/-1->0->-1 [34] -1/-1/-1->0->-1 [35] -1/-1/-1->0->-1 [36] -1/-1/-1->0->-1 [37] -1/-1/-1->0->-1 [38] -1/-1/-1->0->-1 [39] -1/-1/-1->0->-1 [40] -1/-1/-1->0->-1 [41] -1/-1/-1->0->-1 [42] -1/-1/-1->0->-1 [43] -1/-1/-1->0->-1 [44] -1/-1/-1->0->-1 [45] -1/-1/-1->0->-1 [46] -1/-1/-1->0->-1 [47] -
+node-02:17805:17812 [0] NCCL INFO P2P Chunksize set to 524288
+node-02:17805:17812 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-02:17805:17815 [0] NCCL INFO [Proxy Service] Device 0 CPU core 18
+node-02:17805:17816 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 19
+node-02:17805:17812 [0] NCCL INFO 64 coll channels, 64 collnet channels, 0 nvls channels, 64 p2p channels, 64 p2p channels per peer
+node-02:17805:17812 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-02:17805:17812 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-02:17805:17812 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-02:17805:17812 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-02:17805:17812 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-02:17805:17812 [0] NCCL INFO ncclCommInitRankConfig comm 0x5a431acc4510 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0x1133b88475aad483 - Init COMPLETE
+node-02:17805:17812 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 1 total 0.33 (kernels 0.24, alloc 0.06, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.02, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong 
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)         
+     8388608       2097152     float     sum      -1    15.49  541.59    0.00       0     0.16   51054    0.00       0
+     9437184       2359296     float     sum      -1    17.05  553.39    0.00       0     0.16   57618    0.00       0
+     8388608       2097152     float     sum      -1    36.71  228.52    0.00       0     0.14   59137    0.00       0
+     9437184       2359296     float     sum      -1    41.10  229.63    0.00       0     0.14   67840    0.00       0
+    10485760       2621440     float     sum      -1    18.60  563.80    0.00       0     0.16   64247    0.00       0
+    10485760       2621440     float     sum      -1    45.39  231.00    0.00       0     0.14   75178    0.00       0
+    11534336       2883584     float     sum      -1    49.88  231.25    0.00       0     0.14   83341    0.00       0
+    11534336       2883584     float     sum      -1    20.06  574.87    0.00       0     0.16   70672    0.00       0
+    12582912       3145728     float     sum      -1    54.30  231.72    0.00       0     0.15   85262    0.00       0
+    13631488       3407872     float     sum      -1    58.99  231.10    0.00       0     0.15   88230    0.00       0
+    12582912       3145728     float     sum      -1    21.70  579.85    0.00       0     0.16   77096    0.00       0
+    14680064       3670016     float     sum      -1    63.36  231.70    0.00       0     0.14  105105    0.00       0
+    15728640       3932160     float     sum      -1    67.67  232.44    0.00       0     0.16  100336    0.00       0
+    13631488       3407872     float     sum      -1    23.32  584.57    0.00       0     0.16   83322    0.00       0
+    16777216       4194304     float     sum      -1    71.95  233.18    0.00       0     0.14  117826    0.00       0
+    17825792       4456448     float     sum      -1    76.22  233.86    0.00       0     0.14  127263    0.00       0
+    14680064       3670016     float     sum      -1    24.92  589.16    0.00       0     0.16   89726    0.00       0
+    18874368       4718592     float     sum      -1    80.62  234.11    0.00       0     0.14  132956    0.00       0
+    19922944       4980736     float     sum      -1    84.90  234.67    0.00       0     0.14  140629    0.00       0
+    15728640       3932160     float     sum      -1    26.47  594.13    0.00       0     0.16   96613    0.00       0
+    20971520       5242880     float     sum      -1    89.18  235.15    0.00       0     0.14  147697    0.00       0
+    22020096       5505024     float     sum      -1    93.52  235.45    0.00       0     0.14  153258    0.00       0
+    16777216       4194304     float     sum      -1    28.03  598.65    0.00       0     0.17  101674    0.00       0
+    23068672       5767168     float     sum      -1    97.79  235.89    0.00       0     0.16  145912    0.00       0
+    17825792       4456448     float     sum      -1    29.54  603.48    0.00       0     0.16  108833    0.00       0
+    24117248       6029312     float     sum      -1   102.03  236.36    0.00       0     0.15  162395    0.00       0
+    25165824       6291456     float     sum      -1   106.40  236.53    0.00       0     0.14  180116    0.00       0
+    18874368       4718592     float     sum      -1    31.15  605.89    0.00       0     0.16  115440    0.00       0
+    26214400       6553600     float     sum      -1   110.71  236.78    0.00       0     0.14  188065    0.00       0
+    27262976       6815744     float     sum      -1   114.95  237.17    0.00       0     0.15  180072    0.00       0
+    19922944       4980736     float     sum      -1    32.72  608.98    0.00       0     0.16  121995    0.00       0
+    28311552       7077888     float     sum      -1   119.32  237.28    0.00       0     0.16  182173    0.00       0
+    20971520       5242880     float     sum      -1    34.26  612.15    0.00       0     0.16  128502    0.00       0
+    29360128       7340032     float     sum      -1   123.58  237.58    0.00       0     0.14  207962    0.00       0
+    30408704       7602176     float     sum      -1   127.72  238.08    0.00       0     0.14  216355    0.00       0
+    22020096       5505024     float     sum      -1    35.85  614.14    0.00       0     0.16  135084    0.00       0
+    31457280       7864320     float     sum      -1   132.12  238.09    0.00       0     0.14  226686    0.00       0
+    32505856       8126464     float     sum      -1   136.34  238.42    0.00       0     0.14  233452    0.00       0
+    23068672       5767168     float     sum      -1    37.46  615.84    0.00       0     0.16  141188    0.00       0
+    33554432       8388608     float     sum      -1   140.75  238.40    0.00       0     0.20  165824    0.00       0
+    24117248       6029312     float     sum      -1    38.93  619.50    0.00       0     0.16  146699    0.00       0
+    34603008       8650752     float     sum      -1   145.01  238.62    0.00       0     0.14  248086    0.00       0
+    35651584       8912896     float     sum      -1   149.27  238.84    0.00       0     0.15  233154    0.00       0
+    25165824       6291456     float     sum      -1    40.50  621.34    0.00       0     0.17  151885    0.00       0
+    36700160       9175040     float     sum      -1   153.58  238.96    0.00       0     0.14  261938    0.00       0
+    26214400       6553600     float     sum      -1    42.04  623.62    0.00       0     0.16  160039    0.00       0
+    37748736       9437184     float     sum      -1   157.93  239.03    0.00       0     0.15  253790    0.00       0
+    38797312       9699328     float     sum      -1   162.22  239.16    0.00       0     0.14  278656    0.00       0
+    27262976       6815744     float     sum      -1    43.54  626.18    0.00       0     0.16  167155    0.00       0
+    39845888       9961472     float     sum      -1   166.51  239.31    0.00       0     0.14  286188    0.00       0
+    40894464      10223616     float     sum      -1   170.80  239.43    0.00       0     0.14  288355    0.00       0
+    28311552       7077888     float     sum      -1    45.06  628.29    0.00       0     0.16  172842    0.00       0
+    41943040      10485760     float     sum      -1   175.26  239.32    0.00       0     0.14  294875    0.00       0
+    29360128       7340032     float     sum      -1    46.45  632.14    0.00       0     0.16  179793    0.00       0
+    42991616      10747904     float     sum      -1   179.44  239.59    0.00       0     0.15  277688    0.00       0
+    30408704       7602176     float     sum      -1    48.17  631.26    0.00       0     0.16  185975    0.00       0
+    44040192      11010048     float     sum      -1   183.73  239.71    0.00       0     0.15  285087    0.00       0
+    45088768      11272192     float     sum      -1   188.19  239.60    0.00       0     0.14  317795    0.00       0
+    31457280       7864320     float     sum      -1    49.61  634.08    0.00       0     0.16  192883    0.00       0
+    46137344      11534336     float     sum      -1   192.34  239.88    0.00       0     0.14  325254    0.00       0
+    32505856       8126464     float     sum      -1    51.19  635.03    0.00       0     0.16  199068    0.00       0
+    47185920      11796480     float     sum      -1   196.71  239.88    0.00       0     0.14  337887    0.00       0
+    48234496      12058624     float     sum      -1   201.01  239.96    0.00       0     0.15  314436    0.00       0
+    33554432       8388608     float     sum      -1    52.73  636.36    0.00       0     0.16  207254    0.00       0
+    49283072      12320768     float     sum      -1   205.27  240.09    0.00       0     0.14  351997    0.00       0
+    34603008       8650752     float     sum      -1    54.19  638.58    0.00       0     0.16  212275    0.00       0
+    50331648      12582912     float     sum      -1   209.71  240.01    0.00       0     0.14  356836    0.00       0
+    51380224      12845056     float     sum      -1   213.90  240.21    0.00       0     0.16  322497    0.00       0
+    35651584       8912896     float     sum      -1    55.73  639.76    0.00       0     0.16  217906    0.00       0
+    52428800      13107200     float     sum      -1   218.29  240.18    0.00       0     0.14  371361    0.00       0
+    36700160       9175040     float     sum      -1    57.13  642.41    0.00       0     0.16  224741    0.00       0
+    53477376      13369344     float     sum      -1   222.59  240.25    0.00       0     0.15  349548    0.00       0
+    37748736       9437184     float     sum      -1    58.63  643.86    0.00       0     0.16  229895    0.00       0
+    54525952      13631488     float     sum      -1   226.94  240.27    0.00       0     0.16  342220    0.00       0
+    55574528      13893632     float     sum      -1   231.26  240.31    0.00       0     0.14  394593    0.00       0
+    38797312       9699328     float     sum      -1    60.21  644.34    0.00       0     0.16  237438    0.00       0
+    56623104      14155776     float     sum      -1   235.41  240.53    0.00       0     0.15  373824    0.00       0
+    39845888       9961472     float     sum      -1    61.62  646.66    0.00       0     0.16  245659    0.00       0
+    57671680      14417920     float     sum      -1   239.70  240.60    0.00       0     0.14  404118    0.00       0
+    40894464      10223616     float     sum      -1    63.28  646.25    0.00       0     0.16  251179    0.00       0
+    58720256      14680064     float     sum      -1   244.01  240.65    0.00       0     0.16  373562    0.00       0
+    59768832      14942208     float     sum      -1   248.36  240.65    0.00       0     0.15  387857    0.00       0
+    41943040      10485760     float     sum      -1    64.72  648.09    0.00       0     0.16  257161    0.00       0
+    60817408      15204352     float     sum      -1   252.79  240.59    0.00       0     0.15  402898    0.00       0
+    42991616      10747904     float     sum      -1    66.26  648.83    0.00       0     0.16  260571    0.00       0
+    61865984      15466496     float     sum      -1   256.91  240.81    0.00       0     0.15  400401    0.00       0
+    44040192      11010048     float     sum      -1    67.78  649.74    0.00       0     0.16  270517    0.00       0
+    62914560      15728640     float     sum      -1   261.47  240.62    0.00       0     0.14  452916    0.00       0
+    45088768      11272192     float     sum      -1    69.23  651.28    0.00       0     0.16  276618    0.00       0
+    63963136      15990784     float     sum      -1   265.73  240.71    0.00       0     0.15  432768    0.00       0
+    65011712      16252928     float     sum      -1   270.15  240.65    0.00       0     0.16  413324    0.00       0
+    46137344      11534336     float     sum      -1    70.71  652.45    0.00       0     0.16  284272    0.00       0
+    66060288      16515072     float     sum      -1   274.36  240.78    0.00       0     0.15  431316    0.00       0
+    47185920      11796480     float     sum      -1    72.28  652.80    0.00       0     0.16  288422    0.00       0
+    67108864      16777216     float     sum      -1   278.65  240.83    0.00       0     0.15  433576    0.00       0
+    48234496      12058624     float     sum      -1    73.79  653.69    0.00       0     0.16  295555    0.00       0
+    68157440      17039360     float     sum      -1   282.88  240.94    0.00       0     0.15  456819    0.00       0
+    49283072      12320768     float     sum      -1    75.24  655.00    0.00       0     0.16  302703    0.00       0
+    69206016      17301504     float     sum      -1   287.35  240.84    0.00       0     0.14  489504    0.00       0
+    50331648      12582912     float     sum      -1    76.76  655.71    0.00       0     0.16  308575    0.00       0
+    70254592      17563648     float     sum      -1   291.61  240.92    0.00       0     0.14  505247    0.00       0
+    71303168      17825792     float     sum      -1   295.84  241.02    0.00       0     0.15  464455    0.00       0
+    51380224      12845056     float     sum      -1    78.23  656.75    0.00       0     0.16  313485    0.00       0
+    72351744      18087936     float     sum      -1   300.24  240.98    0.00       0     0.16  463199    0.00       0
+    52428800      13107200     float     sum      -1    79.72  657.65    0.00       0     0.16  320450    0.00       0
+    73400320      18350080     float     sum      -1   304.49  241.06    0.00       0     0.16  463503    0.00       0
+    53477376      13369344     float     sum      -1    81.28  657.91    0.00       0     0.16  325466    0.00       0
+    74448896      18612224     float     sum      -1   309.01  240.93    0.00       0     0.15  491964    0.00       0
+    54525952      13631488     float     sum      -1    82.80  658.56    0.00       0     0.16  333696    0.00       0
+    75497472      18874368     float     sum      -1   313.20  241.05    0.00       0     0.14  538115    0.00       0
+    55574528      13893632     float     sum      -1    84.27  659.50    0.00       0     0.16  337839    0.00       0
+    76546048      19136512     float     sum      -1   317.58  241.03    0.00       0     0.15  498347    0.00       0
+    56623104      14155776     float     sum      -1    85.85  659.56    0.00       0     0.16  345684    0.00       0
+    77594624      19398656     float     sum      -1   321.84  241.10    0.00       0     0.14  553102    0.00       0
+    57671680      14417920     float     sum      -1    87.21  661.28    0.00       0     0.16  352301    0.00       0
+    78643200      19660800     float     sum      -1   326.18  241.10    0.00       0     0.15  518139    0.00       0
+    79691776      19922944     float     sum      -1   330.54  241.10    0.00       0     0.14  557480    0.00       0
+    58720256      14680064     float     sum      -1    88.77  661.52    0.00       0     0.16  358050    0.00       0
+    80740352      20185088     float     sum      -1   334.88  241.10    0.00       0     0.14  569356    0.00       0
+    59768832      14942208     float     sum      -1    90.18  662.78    0.00       0     0.16  366231    0.00       0
+    81788928      20447232     float     sum      -1   339.12  241.18    0.00       0     0.14  583207    0.00       0
+    60817408      15204352     float     sum      -1    91.88  661.95    0.00       0     0.17  368546    0.00       0
+    82837504      20709376     float     sum      -1   343.54  241.13    0.00       0     0.15  539131    0.00       0
+    61865984      15466496     float     sum      -1    93.35  662.72    0.00       0     0.16  379290    0.00       0
+    83886080      20971520     float     sum      -1   347.79  241.20    0.00       0     0.14  596757    0.00       0
+    62914560      15728640     float     sum      -1    94.79  663.74    0.00       0     0.16  386453    0.00       0
+    84934656      21233664     float     sum      -1   351.93  241.34    0.00       0     0.15  554368    0.00       0
+    63963136      15990784     float     sum      -1    96.29  664.26    0.00       0     0.16  392171    0.00       0
+    85983232      21495808     float     sum      -1   356.14  241.43    0.00       0     0.15  566238    0.00       0
+    65011712      16252928     float     sum      -1    97.90  664.05    0.00       0     0.16  398576    0.00       0
+    87031808      21757952     float     sum      -1   360.46  241.44    0.00       0     0.14  624914    0.00       0
+    66060288      16515072     float     sum      -1    99.32  665.15    0.00       0     0.16  405527    0.00       0
+    88080384      22020096     float     sum      -1   365.08  241.27    0.00       0     0.14  638588    0.00       0
+    67108864      16777216     float     sum      -1   100.83  665.57    0.00       0     0.16  411660    0.00       0
+    89128960      22282240     float     sum      -1   369.29  241.35    0.00       0     0.16  564679    0.00       0
+    68157440      17039360     float     sum      -1   102.42  665.45    0.00       0     0.16  419405    0.00       0
+    90177536      22544384     float     sum      -1   373.55  241.41    0.00       0     0.15  589319    0.00       0
+    69206016      17301504     float     sum      -1   103.82  666.61    0.00       0     0.16  423278    0.00       0
+    91226112      22806528     float     sum      -1   377.98  241.35    0.00       0     0.16  570984    0.00       0
+    70254592      17563648     float     sum      -1   105.34  666.91    0.00       0     0.16  429141    0.00       0
+    92274688      23068672     float     sum      -1   382.21  241.42    0.00       0     0.14  661230    0.00       0
+    71303168      17825792     float     sum      -1   106.82  667.49    0.00       0     0.16  437416    0.00       0
+    93323264      23330816     float     sum      -1   386.37  241.54    0.00       0     0.15  619923    0.00       0
+    72351744      18087936     float     sum      -1   108.30  668.05    0.00       0     0.16  443576    0.00       0
+    94371840      23592960     float     sum      -1   390.92  241.41    0.00       0     0.16  607244    0.00       0
+    73400320      18350080     float     sum      -1   109.85  668.19    0.00       0     0.16  456158    0.00       0
+    95420416      23855104     float     sum      -1   395.13  241.49    0.00       0     0.14  677943    0.00       0
+    74448896      18612224     float     sum      -1   111.36  668.57    0.00       0     0.16  457865    0.00       0
+    96468992      24117248     float     sum      -1   399.52  241.46    0.00       0     0.16  600753    0.00       0
+    75497472      18874368     float     sum      -1   112.87  668.88    0.00       0     0.16  459482    0.00       0
+    97517568      24379392     float     sum      -1   404.02  241.37    0.00       0     0.14  673464    0.00       0
+    76546048      19136512     float     sum      -1   114.41  669.03    0.00       0     0.16  470474    0.00       0
+    98566144      24641536     float     sum      -1   408.27  241.42    0.00       0     0.14  706770    0.00       0
+    77594624      19398656     float     sum      -1   115.83  669.91    0.00       0     0.16  473976    0.00       0
+    99614720      24903680     float     sum      -1   412.61  241.43    0.00       0     0.16  625878    0.00       0
+    78643200      19660800     float     sum      -1   117.46  669.51    0.00       0     0.16  480117    0.00       0
+   100663296      25165824     float     sum      -1   417.06  241.36    0.00       0     0.16  610821    0.00       0
+    79691776      19922944     float     sum      -1   118.97  669.86    0.00       0     0.16  487114    0.00       0
+   101711872      25427968     float     sum      -1   421.02  241.59    0.00       0     0.17  605032    0.00       0
+    80740352      20185088     float     sum      -1   120.46  670.24    0.00       0     0.16  490823    0.00       0
+   102760448      25690112     float     sum      -1   425.43  241.54    0.00       0     0.16  642654    0.00       0
+    81788928      20447232     float     sum      -1   121.98  670.51    0.00       0     0.16  496292    0.00       0
+   103809024      25952256     float     sum      -1   430.03  241.40    0.00       0     0.16  634646    0.00       0
+    82837504      20709376     float     sum      -1   123.55  670.49    0.00       0     0.16  506342    0.00       0
+   104857600      26214400     float     sum      -1   433.89  241.67    0.00       0     0.14  753666    0.00       0
+    83886080      20971520     float     sum      -1   125.16  670.23    0.00       0     0.16  509915    0.00       0
+   105906176      26476544     float     sum      -1   438.48  241.53    0.00       0     0.16  682913    0.00       0
+    84934656      21233664     float     sum      -1   126.48  671.53    0.00       0     0.16  520401    0.00       0
+   106954752      26738688     float     sum      -1   442.75  241.57    0.00       0     0.16  683941    0.00       0
+    85983232      21495808     float     sum      -1   127.87  672.41    0.00       0     0.16  525217    0.00       0
+   108003328      27000832     float     sum      -1   447.33  241.44    0.00       0     0.14  777282    0.00       0
+    87031808      21757952     float     sum      -1   129.51  672.03    0.00       0     0.16  532272    0.00       0
+   109051904      27262976     float     sum      -1   451.28  241.65    0.00       0     0.15  705929    0.00       0
+    88080384      22020096     float     sum      -1   130.91  672.83    0.00       0     0.16  540370    0.00       0
+   110100480      27525120     float     sum      -1   455.84  241.53    0.00       0     0.16  708588    0.00       0
+    89128960      22282240     float     sum      -1   132.54  672.47    0.00       0     0.16  545465    0.00       0
+   111149056      27787264     float     sum      -1   460.02  241.62    0.00       0     0.15  729803    0.00       0
+    90177536      22544384     float     sum      -1   134.10  672.44    0.00       0     0.16  550501    0.00       0
+   112197632      28049408     float     sum      -1   464.51  241.54    0.00       0     0.15  730358    0.00       0
+    91226112      22806528     float     sum      -1   135.56  672.98    0.00       0     0.16  557276    0.00       0
+   113246208      28311552     float     sum      -1   468.57  241.69    0.00       0     0.15  739929    0.00       0
+    92274688      23068672     float     sum      -1   137.07  673.19    0.00       0     0.16  563992    0.00       0
+   114294784      28573696     float     sum      -1   473.08  241.60    0.00       0     0.15  757120    0.00       0
+    93323264      23330816     float     sum      -1   138.55  673.58    0.00       0     0.16  567315    0.00       0
+   115343360      28835840     float     sum      -1   477.18  241.72    0.00       0     0.19  611123    0.00       0
+    94371840      23592960     float     sum      -1   140.04  673.89    0.00       0     0.16  575789    0.00       0
+    95420416      23855104     float     sum      -1   141.61  673.82    0.00       0     0.16  581123    0.00       0
+   116391936      29097984     float     sum      -1   481.59  241.68    0.00       0     0.14  810247    0.00       0
+    96468992      24117248     float     sum      -1   143.06  674.33    0.00       0     0.16  591471    0.00       0
+   117440512      29360128     float     sum      -1   485.80  241.75    0.00       0     0.15  795829    0.00       0
+    97517568      24379392     float     sum      -1   144.49  674.90    0.00       0     0.16  598598    0.00       0
+   118489088      29622272     float     sum      -1   490.20  241.72    0.00       0     0.15  772772    0.00       0
+    98566144      24641536     float     sum      -1   146.04  674.94    0.00       0     0.16  603183    0.00       0
+   119537664      29884416     float     sum      -1   494.45  241.76    0.00       0     0.16  763819    0.00       0
+    99614720      24903680     float     sum      -1   147.57  675.01    0.00       0     0.16  608483    0.00       0
+   120586240      30146560     float     sum      -1   498.89  241.71    0.00       0     0.15  800333    0.00       0
+   100663296      25165824     float     sum      -1   148.98  675.68    0.00       0     0.16  618287    0.00       0
+   121634816      30408704     float     sum      -1   503.20  241.72    0.00       0     0.16  777120    0.00       0
+   101711872      25427968     float     sum      -1   150.60  675.36    0.00       0     0.16  621673    0.00       0
+   122683392      30670848     float     sum      -1   507.45  241.76    0.00       0     0.16  782220    0.00       0
+   102760448      25690112     float     sum      -1   152.05  675.84    0.00       0     0.16  628504    0.00       0
+   123731968      30932992     float     sum      -1   511.90  241.71    0.00       0     0.14  880843    0.00       0
+   103809024      25952256     float     sum      -1   153.64  675.67    0.00       0     0.16  633716    0.00       0
+   124780544      31195136     float     sum      -1   516.30  241.68    0.00       0     0.17  750515    0.00       0
+   104857600      26214400     float     sum      -1   155.15  675.84    0.00       0     0.16  640117    0.00       0
+   105906176      26476544     float     sum      -1   156.70  675.85    0.00       0     0.16  649731    0.00       0
+   125829120      31457280     float     sum      -1   520.45  241.77    0.00       0     0.15  828041    0.00       0
+   106954752      26738688     float     sum      -1   158.07  676.61    0.00       0     0.16  656607    0.00       0
+   126877696      31719424     float     sum      -1   524.81  241.76    0.00       0     0.16  816301    0.00       0
+   108003328      27000832     float     sum      -1   159.43  677.43    0.00       0     0.16  661380    0.00       0
+   127926272      31981568     float     sum      -1   529.09  241.79    0.00       0     0.15  850291    0.00       0
+   109051904      27262976     float     sum      -1   161.00  677.35    0.00       0     0.16  662124    0.00       0
+   128974848      32243712     float     sum      -1   533.46  241.77    0.00       0     0.15  843579    0.00       0
+   110100480      27525120     float     sum      -1   162.73  676.60    0.00       0     0.16  667680    0.00       0
+   130023424      32505856     float     sum      -1   537.81  241.76    0.00       0     0.15  844144    0.00       0
+   111149056      27787264     float     sum      -1   164.12  677.24    0.00       0     0.16  681854    0.00       0
+   131072000      32768000     float     sum      -1   541.99  241.83    0.00       0     0.14  957569    0.00       0
+   112197632      28049408     float     sum      -1   165.70  677.12    0.00       0     0.16  687485    0.00       0
+   132120576      33030144     float     sum      -1   546.42  241.79    0.00       0     0.16  847416    0.00       0
+   113246208      28311552     float     sum      -1   167.23  677.18    0.00       0     0.17  684681    0.00       0
+   133169152      33292288     float     sum      -1   550.93  241.72    0.00       0     0.15  861657    0.00       0
+   114294784      28573696     float     sum      -1   168.66  677.67    0.00       0     0.16  700722    0.00       0
+   134217728      33554432     float     sum      -1   555.17  241.76    0.00       0     0.15  891871    0.00       0
+   115343360      28835840     float     sum      -1   170.30  677.30    0.00       0     0.16  702029    0.00       0
+   116391936      29097984     float     sum      -1   171.72  677.82    0.00       0     0.16  714455    0.00       0
+   135266304      33816576     float     sum      -1   559.49  241.77    0.00       0     0.15  895863    0.00       0
+   117440512      29360128     float     sum      -1   173.08  678.53    0.00       0     0.16  717413    0.00       0
+   136314880      34078720     float     sum      -1   563.85  241.76    0.00       0     0.15  900065    0.00       0
+   118489088      29622272     float     sum      -1   174.50  679.02    0.00       0     0.16  725059    0.00       0
+   137363456      34340864     float     sum      -1   568.10  241.79    0.00       0     0.19  732371    0.00       0
+   119537664      29884416     float     sum      -1   176.28  678.12    0.00       0     0.16  732461    0.00       0
+   138412032      34603008     float     sum      -1   572.45  241.79    0.00       0     0.16  886859    0.00       0
+   120586240      30146560     float     sum      -1   177.63  678.87    0.00       0     0.16  738389    0.00       0
+   139460608      34865152     float     sum      -1   576.70  241.83    0.00       0     0.16  877056    0.00       0
+   121634816      30408704     float     sum      -1   179.12  679.07    0.00       0     0.16  740727    0.00       0
+   140509184      35127296     float     sum      -1   580.94  241.87    0.00       0     0.15  906569    0.00       0
+   122683392      30670848     float     sum      -1   180.77  678.67    0.00       0     0.16  753121    0.00       0
+   141557760      35389440     float     sum      -1   585.08  241.94    0.00       0     0.15  924791    0.00       0
+   123731968      30932992     float     sum      -1   182.20  679.12    0.00       0     0.17  749437    0.00       0
+   142606336      35651584     float     sum      -1   589.69  241.83    0.00       0     0.16  917083    0.00       0
+   124780544      31195136     float     sum      -1   183.62  679.57    0.00       0     0.16  760811    0.00       0
+   125829120      31457280     float     sum      -1   185.27  679.16    0.00       0     0.16  767251    0.00       0
+   143654912      35913728     float     sum      -1   593.96  241.86    0.00       0     0.16  912848    0.00       0
+   126877696      31719424     float     sum      -1   186.76  679.35    0.00       0     0.16  780786    0.00       0
+   144703488      36175872     float     sum      -1   598.23  241.89    0.00       0     0.16  900009    0.00       0
+   127926272      31981568     float     sum      -1   188.23  679.62    0.00       0     0.16  780991    0.00       0
+   145752064      36438016     float     sum      -1   602.60  241.87    0.00       0     0.15  945705    0.00       0
+   128974848      32243712     float     sum      -1   189.69  679.94    0.00       0     0.16  789368    0.00       0
+   146800640      36700160     float     sum      -1   607.08  241.82    0.00       0     0.15  975938    0.00       0
+   130023424      32505856     float     sum      -1   191.34  679.54    0.00       0     0.16  795250    0.00       0
+   147849216      36962304     float     sum      -1   611.13  241.93    0.00       0     0.15  956891    0.00       0
+   131072000      32768000     float     sum      -1   192.79  679.87    0.00       0     0.16  799220    0.00       0
+   148897792      37224448     float     sum      -1   615.58  241.88    0.00       0     0.15  963116    0.00       0
+   132120576      33030144     float     sum      -1   194.11  680.65    0.00       0     0.16  807040    0.00       0
+   149946368      37486592     float     sum      -1   619.99  241.85    0.00       0     0.16  952403    0.00       0
+   133169152      33292288     float     sum      -1   195.68  680.56    0.00       0     0.16  823557    0.00       0
+   134217728      33554432     float     sum      -1   197.23  680.50    0.00       0     0.16  814922    0.00       0
+   150994944      37748736     float     sum      -1   624.37  241.83    0.00       0     0.16  955725    0.00       0
+   135266304      33816576     float     sum      -1   198.80  680.42    0.00       0     0.16  829804    0.00       0
+   152043520      38010880     float     sum      -1   628.42  241.94    0.00       0     0.16  965724    0.00       0
+   136314880      34078720     float     sum      -1   200.25  680.72    0.00       0     0.16  838809    0.00       0
+   153092096      38273024     float     sum      -1   632.71  241.96    0.00       0     0.15  996434    0.00       0
+   137363456      34340864     float     sum      -1   201.60  681.38    0.00       0     0.16  835493    0.00       0
+   154140672      38535168     float     sum      -1   637.00  241.98    0.00       0     0.16  976625    0.00       0
+   138412032      34603008     float     sum      -1   203.20  681.15    0.00       0     0.16  850145    0.00       0
+   155189248      38797312     float     sum      -1   641.39  241.96    0.00       0     0.16  981838    0.00       0
+   139460608      34865152     float     sum      -1   204.78  681.01    0.00       0     0.16  846242    0.00       0
+   140509184      35127296     float     sum      -1   206.26  681.22    0.00       0     0.16  860331    0.00       0
+   156237824      39059456     float     sum      -1   645.83  241.92    0.00       0     0.16  977709    0.00       0
+   141557760      35389440     float     sum      -1   207.85  681.06    0.00       0     0.16  867920    0.00       0
+   157286400      39321600     float     sum      -1   650.33  241.86    0.00       0     0.15   1e+06    0.00       0
+   142606336      35651584     float     sum      -1   209.36  681.14    0.00       0     0.16  868545    0.00       0
+   158334976      39583744     float     sum      -1   654.48  241.93    0.00       0     0.16   1e+06    0.00       0
+   143654912      35913728     float     sum      -1   210.88  681.22    0.00       0     0.16  880832    0.00       0
+   159383552      39845888     float     sum      -1   658.96  241.87    0.00       0     0.16  996272    0.00       0
+   144703488      36175872     float     sum      -1   212.36  681.42    0.00       0     0.16  883955    0.00       0
+   145752064      36438016     float     sum      -1   213.75  681.87    0.00       0     0.16  891450    0.00       0
+   160432128      40108032     float     sum      -1   663.28  241.88    0.00       0     0.16   1e+06    0.00       0
+   146800640      36700160     float     sum      -1   215.46  681.32    0.00       0     0.16  896219    0.00       0
+   161480704      40370176     float     sum      -1   667.35  241.97    0.00       0     0.16   1e+06    0.00       0
+   147849216      36962304     float     sum      -1   216.81  681.92    0.00       0     0.16  904885    0.00       0
+   162529280      40632320     float     sum      -1   671.95  241.88    0.00       0     0.16   1e+06    0.00       0
+   148897792      37224448     float     sum      -1   218.49  681.50    0.00       0     0.16  906808    0.00       0
+   163577856      40894464     float     sum      -1   676.29  241.88    0.00       0     0.15   1e+06    0.00       0
+   149946368      37486592     float     sum      -1   219.95  681.72    0.00       0     0.16  917608    0.00       0
+   150994944      37748736     float     sum      -1   221.32  682.23    0.00       0     0.17  915010    0.00       0
+   164626432      41156608     float     sum      -1   680.38  241.96    0.00       0     0.16   1e+06    0.00       0
+   152043520      38010880     float     sum      -1   223.05  681.66    0.00       0     0.16  932840    0.00       0
+   165675008      41418752     float     sum      -1   684.55  242.02    0.00       0     0.15   1e+06    0.00       0
+   153092096      38273024     float     sum      -1   224.44  682.10    0.00       0     0.16  940947    0.00       0
+   166723584      41680896     float     sum      -1   688.95  242.00    0.00       0     0.15   1e+06    0.00       0
+   154140672      38535168     float     sum      -1   225.97  682.13    0.00       0     0.16  943276    0.00       0
+   167772160      41943040     float     sum      -1   693.05  242.08    0.00       0     0.16   1e+06    0.00       0
+   155189248      38797312     float     sum      -1   227.46  682.27    0.00       0     0.16  949170    0.00       0
+   168820736      42205184     float     sum      -1   698.10  241.83    0.00       0     0.15   1e+06    0.00       0
+   156237824      39059456     float     sum      -1   228.82  682.79    0.00       0     0.16  959692    0.00       0
+   157286400      39321600     float     sum      -1   230.44  682.54    0.00       0     0.16  963116    0.00       0
+   169869312      42467328     float     sum      -1   702.13  241.93    0.00       0     0.15   1e+06    0.00       0
+   158334976      39583744     float     sum      -1   232.13  682.11    0.00       0     0.16  974369    0.00       0
+   170917888      42729472     float     sum      -1   706.13  242.05    0.00       0     0.15   1e+06    0.00       0
+   159383552      39845888     float     sum      -1   233.57  682.39    0.00       0     0.16  973097    0.00       0
+   171966464      42991616     float     sum      -1   710.86  241.91    0.00       0     0.15   1e+06    0.00       0
+   160432128      40108032     float     sum      -1   234.94  682.87    0.00       0     0.16  977708    0.00       0
+   173015040      43253760     float     sum      -1   715.25  241.89    0.00       0     0.15   1e+06    0.00       0
+   161480704      40370176     float     sum      -1   236.56  682.61    0.00       0     0.16  988194    0.00       0
+   174063616      43515904     float     sum      -1   719.19  242.03    0.00       0     0.16   1e+06    0.00       0
+   162529280      40632320     float     sum      -1   238.06  682.71    0.00       0     0.16  994002    0.00       0
+   163577856      40894464     float     sum      -1   239.66  682.53    0.00       0     0.16   1e+06    0.00       0
+   175112192      43778048     float     sum      -1   723.48  242.04    0.00       0     0.16   1e+06    0.00       0
+   164626432      41156608     float     sum      -1   241.12  682.76    0.00       0     0.17  995865    0.00       0
+   176160768      44040192     float     sum      -1   727.71  242.08    0.00       0     0.15   1e+06    0.00       0
+   165675008      41418752     float     sum      -1   242.61  682.89    0.00       0     0.16   1e+06    0.00       0
+   177209344      44302336     float     sum      -1   732.34  241.98    0.00       0     0.16   1e+06    0.00       0
+   166723584      41680896     float     sum      -1   244.08  683.07    0.00       0     0.16   1e+06    0.00       0
+   178257920      44564480     float     sum      -1   736.69  241.97    0.00       0     0.16   1e+06    0.00       0
+   167772160      41943040     float     sum      -1   245.57  683.19    0.00       0     0.17  986199    0.00       0
+   168820736      42205184     float     sum      -1   247.23  682.85    0.00       0     0.16   1e+06    0.00       0
+   179306496      44826624     float     sum      -1   741.06  241.96    0.00       0     0.16   1e+06    0.00       0
+   169869312      42467328     float     sum      -1   248.74  682.92    0.00       0     0.16   1e+06    0.00       0
+   180355072      45088768     float     sum      -1   745.12  242.05    0.00       0     0.15   1e+06    0.00       0
+   170917888      42729472     float     sum      -1   250.22  683.07    0.00       0     0.16   1e+06    0.00       0
+   181403648      45350912     float     sum      -1   749.58  242.01    0.00       0     0.16   1e+06    0.00       0
+   171966464      42991616     float     sum      -1   251.80  682.95    0.00       0     0.16   1e+06    0.00       0
+   182452224      45613056     float     sum      -1   754.08  241.95    0.00       0     0.15   1e+06    0.00       0
+   173015040      43253760     float     sum      -1   253.24  683.22    0.00       0     0.16   1e+06    0.00       0
+   174063616      43515904     float     sum      -1   254.64  683.56    0.00       0     0.16   1e+06    0.00       0
+   183500800      45875200     float     sum      -1   758.11  242.05    0.00       0     0.16   1e+06    0.00       0
+   175112192      43778048     float     sum      -1   256.25  683.37    0.00       0     0.16   1e+06    0.00       0
+   184549376      46137344     float     sum      -1   762.26  242.11    0.00       0     0.16   1e+06    0.00       0
+   176160768      44040192     float     sum      -1   257.82  683.26    0.00       0     0.16   1e+06    0.00       0
+   185597952      46399488     float     sum      -1   767.05  241.96    0.00       0     0.16   1e+06    0.00       0
+   177209344      44302336     float     sum      -1   259.41  683.12    0.00       0     0.16   1e+06    0.00       0
+   186646528      46661632     float     sum      -1   771.14  242.04    0.00       0     0.15   1e+06    0.00       0
+   178257920      44564480     float     sum      -1   260.79  683.53    0.00       0     0.26  695505    0.00       0
+   179306496      44826624     float     sum      -1   262.24  683.75    0.00       0     0.16   1e+06    0.00       0
+   187695104      46923776     float     sum      -1   775.63  241.99    0.00       0     0.16   1e+06    0.00       0
+   180355072      45088768     float     sum      -1   263.98  683.23    0.00       0     0.16   1e+06    0.00       0
+   188743680      47185920     float     sum      -1   779.84  242.03    0.00       0     0.15   1e+06    0.00       0
+   181403648      45350912     float     sum      -1   265.26  683.86    0.00       0     0.16   1e+06    0.00       0
+   189792256      47448064     float     sum      -1   784.54  241.92    0.00       0     0.15   1e+06    0.00       0
+   182452224      45613056     float     sum      -1   267.08  683.14    0.00       0     0.16   1e+06    0.00       0
+   190840832      47710208     float     sum      -1   788.05  242.17    0.00       0     0.15   1e+06    0.00       0
+   183500800      45875200     float     sum      -1   268.31  683.90    0.00       0     0.16   1e+06    0.00       0
+   184549376      46137344     float     sum      -1   269.96  683.62    0.00       0     0.16   1e+06    0.00       0
+   191889408      47972352     float     sum      -1   792.92  242.00    0.00       0     0.16   1e+06    0.00       0
+   185597952      46399488     float     sum      -1   271.30  684.10    0.00       0     0.16   1e+06    0.00       0
+   192937984      48234496     float     sum      -1   797.49  241.93    0.00       0     0.15   1e+06    0.00       0
+   186646528      46661632     float     sum      -1   272.89  683.95    0.00       0     0.16   1e+06    0.00       0
+   193986560      48496640     float     sum      -1   801.36  242.07    0.00       0     0.16   1e+06    0.00       0
+   187695104      46923776     float     sum      -1   274.39  684.06    0.00       0     0.16   1e+06    0.00       0
+   195035136      48758784     float     sum      -1   805.64  242.09    0.00       0     0.16   1e+06    0.00       0
+   188743680      47185920     float     sum      -1   275.90  684.11    0.00       0     0.16   1e+06    0.00       0
+   189792256      47448064     float     sum      -1   277.35  684.31    0.00       0     0.16   1e+06    0.00       0
+   196083712      49020928     float     sum      -1   810.24  242.01    0.00       0     0.16   1e+06    0.00       0
+   190840832      47710208     float     sum      -1   278.99  684.03    0.00       0     0.16   1e+06    0.00       0
+   197132288      49283072     float     sum      -1   814.25  242.10    0.00       0     0.16   1e+06    0.00       0
+   191889408      47972352     float     sum      -1   280.34  684.48    0.00       0     0.16   1e+06    0.00       0
+   198180864      49545216     float     sum      -1   818.79  242.04    0.00       0     0.16   1e+06    0.00       0
+   192937984      48234496     float     sum      -1   282.14  683.83    0.00       0     0.16   1e+06    0.00       0
+   199229440      49807360     float     sum      -1   823.02  242.07    0.00       0     0.15   1e+06    0.00       0
+   193986560      48496640     float     sum      -1   283.53  684.18    0.00       0     0.17   1e+06    0.00       0
+   195035136      48758784     float     sum      -1   284.81  684.79    0.00       0     0.16   1e+06    0.00       0
+   200278016      50069504     float     sum      -1   827.24  242.10    0.00       0     0.15   1e+06    0.00       0
+   196083712      49020928     float     sum      -1   286.45  684.52    0.00       0     0.16   1e+06    0.00       0
+   201326592      50331648     float     sum      -1   831.67  242.08    0.00       0     0.15   1e+06    0.00       0
+   197132288      49283072     float     sum      -1   287.97  684.55    0.00       0     0.17   1e+06    0.00       0
+   202375168      50593792     float     sum      -1   835.78  242.14    0.00       0     0.15   1e+06    0.00       0
+   198180864      49545216     float     sum      -1   289.41  684.77    0.00       0     0.16   1e+06    0.00       0
+   199229440      49807360     float     sum      -1   291.01  684.62    0.00       0     0.16   1e+06    0.00       0
+   203423744      50855936     float     sum      -1   840.92  241.91    0.00       0     0.15   1e+06    0.00       0
+   200278016      50069504     float     sum      -1   292.56  684.56    0.00       0     0.16   1e+06    0.00       0
+   204472320      51118080     float     sum      -1   844.39  242.15    0.00       0     0.16   1e+06    0.00       0
+   201326592      50331648     float     sum      -1   294.08  684.61    0.00       0     0.16   1e+06    0.00       0
+   205520896      51380224     float     sum      -1   848.82  242.13    0.00       0     0.16   1e+06    0.00       0
+   202375168      50593792     float     sum      -1   295.58  684.68    0.00       0     0.16   1e+06    0.00       0
+   203423744      50855936     float     sum      -1   297.14  684.62    0.00       0     0.24  841289    0.00       0
+   206569472      51642368     float     sum      -1   853.02  242.16    0.00       0     0.16   1e+06    0.00       0
+   204472320      51118080     float     sum      -1   298.60  684.77    0.00       0     0.16   1e+06    0.00       0
+   207618048      51904512     float     sum      -1   857.74  242.05    0.00       0     0.16   1e+06    0.00       0
+   205520896      51380224     float     sum      -1   299.96  685.16    0.00       0     0.16   1e+06    0.00       0
+   208666624      52166656     float     sum      -1   861.78  242.13    0.00       0     0.15   1e+06    0.00       0
+   206569472      51642368     float     sum      -1   301.68  684.73    0.00       0     0.16   1e+06    0.00       0
+   207618048      51904512     float     sum      -1   303.06  685.07    0.00       0     0.16   1e+06    0.00       0
+   209715200      52428800     float     sum      -1   866.12  242.13    0.00       0     0.15   1e+06    0.00       0
+   208666624      52166656     float     sum      -1   304.68  684.87    0.00       0     0.16   1e+06    0.00       0
+   210763776      52690944     float     sum      -1   870.17  242.21    0.00       0     0.15   1e+06    0.00       0
+   209715200      52428800     float     sum      -1   306.20  684.89    0.00       0     0.16   1e+06    0.00       0
+   211812352      52953088     float     sum      -1   874.90  242.10    0.00       0     0.15   1e+06    0.00       0
+   210763776      52690944     float     sum      -1   307.61  685.16    0.00       0     0.16   1e+06    0.00       0
+   211812352      52953088     float     sum      -1   309.01  685.46    0.00       0     0.16   1e+06    0.00       0
+   212860928      53215232     float     sum      -1   879.18  242.11    0.00       0     0.16   1e+06    0.00       0
+   212860928      53215232     float     sum      -1   310.62  685.28    0.00       0     0.16   1e+06    0.00       0
+   213909504      53477376     float     sum      -1   883.88  242.01    0.00       0     0.16   1e+06    0.00       0
+   213909504      53477376     float     sum      -1   312.18  685.21    0.00       0     0.16   1e+06    0.00       0
+   214958080      53739520     float     sum      -1   887.46  242.22    0.00       0     0.15   1e+06    0.00       0
+   214958080      53739520     float     sum      -1   313.76  685.10    0.00       0     0.16   1e+06    0.00       0
+   216006656      54001664     float     sum      -1   315.25  685.20    0.00       0     0.16   1e+06    0.00       0
+   216006656      54001664     float     sum      -1   892.30  242.08    0.00       0     0.16   1e+06    0.00       0
+   217055232      54263808     float     sum      -1   316.57  685.64    0.00       0     0.16   1e+06    0.00       0
+   217055232      54263808     float     sum      -1   896.89  242.01    0.00       0     0.16   1e+06    0.00       0
+   218103808      54525952     float     sum      -1   318.05  685.75    0.00       0     0.24  900140    0.00       0
+   218103808      54525952     float     sum      -1   901.05  242.06    0.00       0     0.16   1e+06    0.00       0
+   219152384      54788096     float     sum      -1   319.67  685.57    0.00       0     0.16   1e+06    0.00       0
+   220200960      55050240     float     sum      -1   321.32  685.30    0.00       0     0.16   1e+06    0.00       0
+   219152384      54788096     float     sum      -1   905.08  242.14    0.00       0     0.16   1e+06    0.00       0
+   221249536      55312384     float     sum      -1   322.66  685.71    0.00       0     0.24  919918    0.00       0
+   220200960      55050240     float     sum      -1   909.57  242.09    0.00       0     0.15   1e+06    0.00       0
+   222298112      55574528     float     sum      -1   324.16  685.77    0.00       0     0.16   1e+06    0.00       0
+   221249536      55312384     float     sum      -1   914.02  242.06    0.00       0     0.16   1e+06    0.00       0
+   223346688      55836672     float     sum      -1   325.67  685.80    0.00       0     0.16   1e+06    0.00       0
+   222298112      55574528     float     sum      -1   918.37  242.06    0.00       0     0.15   1e+06    0.00       0
+   224395264      56098816     float     sum      -1   327.23  685.75    0.00       0     0.16   1e+06    0.00       0
+   225443840      56360960     float     sum      -1   328.68  685.90    0.00       0     0.16   1e+06    0.00       0
+   223346688      55836672     float     sum      -1   922.61  242.08    0.00       0     0.16   1e+06    0.00       0
+   226492416      56623104     float     sum      -1   330.25  685.82    0.00       0     0.16   1e+06    0.00       0
+   224395264      56098816     float     sum      -1   926.96  242.08    0.00       0     0.14   2e+06    0.00       0
+   227540992      56885248     float     sum      -1   331.60  686.19    0.00       0     0.16   1e+06    0.00       0
+   225443840      56360960     float     sum      -1   931.24  242.09    0.00       0     0.16   1e+06    0.00       0
+   228589568      57147392     float     sum      -1   333.28  685.88    0.00       0     0.16   1e+06    0.00       0
+   229638144      57409536     float     sum      -1   334.69  686.13    0.00       0     0.16   1e+06    0.00       0
+   226492416      56623104     float     sum      -1   935.42  242.13    0.00       0     0.16   1e+06    0.00       0
+   230686720      57671680     float     sum      -1   336.39  685.77    0.00       0     0.16   1e+06    0.00       0
+   227540992      56885248     float     sum      -1   940.08  242.04    0.00       0     0.16   1e+06    0.00       0
+   231735296      57933824     float     sum      -1   337.72  686.18    0.00       0     0.16   1e+06    0.00       0
+   228589568      57147392     float     sum      -1   943.92  242.17    0.00       0     0.15   1e+06    0.00       0
+   232783872      58195968     float     sum      -1   339.30  686.08    0.00       0     0.16   1e+06    0.00       0
+   233832448      58458112     float     sum      -1   340.89  685.95    0.00       0     0.16   1e+06    0.00       0
+   229638144      57409536     float     sum      -1   948.55  242.09    0.00       0     0.16   1e+06    0.00       0
+   234881024      58720256     float     sum      -1   342.43  685.92    0.00       0     0.16   1e+06    0.00       0
+   230686720      57671680     float     sum      -1   952.71  242.14    0.00       0     0.16   1e+06    0.00       0
+   235929600      58982400     float     sum      -1   343.89  686.06    0.00       0     0.16   1e+06    0.00       0
+   231735296      57933824     float     sum      -1   957.28  242.08    0.00       0     0.15   2e+06    0.00       0
+   236978176      59244544     float     sum      -1   345.35  686.20    0.00       0     0.16   1e+06    0.00       0
+   238026752      59506688     float     sum      -1   346.81  686.33    0.00       0     0.16   1e+06    0.00       0
+   232783872      58195968     float     sum      -1   961.45  242.12    0.00       0     0.19   1e+06    0.00       0
+   239075328      59768832     float     sum      -1   348.32  686.38    0.00       0     0.16   1e+06    0.00       0
+   233832448      58458112     float     sum      -1   965.54  242.18    0.00       0     0.15   2e+06    0.00       0
+   240123904      60030976     float     sum      -1   349.94  686.19    0.00       0     0.27  905103    0.00       0
+   241172480      60293120     float     sum      -1   351.41  686.30    0.00       0     0.16   1e+06    0.00       0
+   234881024      58720256     float     sum      -1   969.79  242.20    0.00       0     0.15   2e+06    0.00       0
+   242221056      60555264     float     sum      -1   353.05  686.08    0.00       0     0.16   1e+06    0.00       0
+   235929600      58982400     float     sum      -1   974.38  242.13    0.00       0     0.15   2e+06    0.00       0
+   243269632      60817408     float     sum      -1   354.32  686.58    0.00       0     0.17   1e+06    0.00       0
+   236978176      59244544     float     sum      -1   978.65  242.15    0.00       0     0.15   2e+06    0.00       0
+   244318208      61079552     float     sum      -1   355.92  686.45    0.00       0     0.17   1e+06    0.00       0
+   245366784      61341696     float     sum      -1   357.48  686.38    0.00       0     0.16   1e+06    0.00       0
+   238026752      59506688     float     sum      -1   982.87  242.18    0.00       0     0.16   2e+06    0.00       0
+   246415360      61603840     float     sum      -1   358.91  686.56    0.00       0     0.16   1e+06    0.00       0
+   239075328      59768832     float     sum      -1   987.83  242.02    0.00       0     0.15   2e+06    0.00       0
+   247463936      61865984     float     sum      -1   360.36  686.71    0.00       0     0.16   2e+06    0.00       0
+   240123904      60030976     float     sum      -1   991.43  242.20    0.00       0     0.15   2e+06    0.00       0
+   248512512      62128128     float     sum      -1   362.00  686.51    0.00       0     0.16   2e+06    0.00       0
+   249561088      62390272     float     sum      -1   363.55  686.46    0.00       0     0.23   1e+06    0.00       0
+   241172480      60293120     float     sum      -1   996.03  242.13    0.00       0     0.16   2e+06    0.00       0
+   250609664      62652416     float     sum      -1   365.00  686.59    0.00       0     0.16   2e+06    0.00       0
+   242221056      60555264     float     sum      -1   999.73  242.29    0.00       0     0.16   2e+06    0.00       0
+   251658240      62914560     float     sum      -1   366.65  686.38    0.00       0     0.16   2e+06    0.00       0
+   243269632      60817408     float     sum      -1  1004.35  242.22    0.00       0     0.15   2e+06    0.00       0
+   252706816      63176704     float     sum      -1   367.92  686.85    0.00       0     0.16   2e+06    0.00       0
+   253755392      63438848     float     sum      -1   369.47  686.81    0.00       0     0.26  977825    0.00       0
+   244318208      61079552     float     sum      -1  1008.77  242.19    0.00       0     0.15   2e+06    0.00       0
+   254803968      63700992     float     sum      -1   371.13  686.56    0.00       0     0.16   2e+06    0.00       0
+   245366784      61341696     float     sum      -1  1013.30  242.15    0.00       0     0.15   2e+06    0.00       0
+   255852544      63963136     float     sum      -1   372.57  686.73    0.00       0     0.16   2e+06    0.00       0
+   246415360      61603840     float     sum      -1  1017.41  242.20    0.00       0     0.16   2e+06    0.00       0
+   256901120      64225280     float     sum      -1   373.92  687.04    0.00       0     0.16   2e+06    0.00       0
+   257949696      64487424     float     sum      -1   375.56  686.85    0.00       0     0.16   2e+06    0.00       0
+   247463936      61865984     float     sum      -1  1021.76  242.19    0.00       0     0.16   2e+06    0.00       0
+   258998272      64749568     float     sum      -1   377.08  686.85    0.00       0     0.16   2e+06    0.00       0
+   248512512      62128128     float     sum      -1  1026.03  242.21    0.00       0     0.15   2e+06    0.00       0
+   260046848      65011712     float     sum      -1   378.72  686.65    0.00       0     0.16   2e+06    0.00       0
+   261095424      65273856     float     sum      -1   380.08  686.95    0.00       0     0.24   1e+06    0.00       0
+   249561088      62390272     float     sum      -1  1030.76  242.11    0.00       0     0.15   2e+06    0.00       0
+   262144000      65536000     float     sum      -1   381.75  686.70    0.00       0     0.16   2e+06    0.00       0
+   250609664      62652416     float     sum      -1  1034.68  242.21    0.00       0     0.16   2e+06    0.00       0
+   263192576      65798144     float     sum      -1   383.27  686.71    0.00       0     0.16   2e+06    0.00       0
+   251658240      62914560     float     sum      -1  1039.05  242.20    0.00       0     0.15   2e+06    0.00       0
+   264241152      66060288     float     sum      -1   384.59  687.07    0.00       0     0.16   2e+06    0.00       0
+   265289728      66322432     float     sum      -1   386.19  686.94    0.00       0     0.16   2e+06    0.00       0
+   252706816      63176704     float     sum      -1  1043.45  242.18    0.00       0     0.20   1e+06    0.00       0
+   266338304      66584576     float     sum      -1   387.63  687.09    0.00       0     0.16   2e+06    0.00       0
+   253755392      63438848     float     sum      -1  1048.15  242.10    0.00       0     0.15   2e+06    0.00       0
+   267386880      66846720     float     sum      -1   389.17  687.08    0.00       0     0.16   2e+06    0.00       0
+   268435456      67108864     float     sum      -1   390.72  687.02    0.00       0     0.16   2e+06    0.00       0
+   254803968      63700992     float     sum      -1  1051.91  242.23    0.00       0     0.16   2e+06    0.00       0
+   269484032      67371008     float     sum      -1   392.20  687.11    0.00       0     0.16   2e+06    0.00       0
+   255852544      63963136     float     sum      -1  1056.85  242.09    0.00       0     0.15   2e+06    0.00       0
+   270532608      67633152     float     sum      -1   393.76  687.05    0.00       0     0.16   2e+06    0.00       0
+   256901120      64225280     float     sum      -1  1060.68  242.20    0.00       0     0.14   2e+06    0.00       0
+   271581184      67895296     float     sum      -1   395.35  686.93    0.00       0     0.16   2e+06    0.00       0
+   272629760      68157440     float     sum      -1   396.76  687.14    0.00       0     0.16   2e+06    0.00       0
+   257949696      64487424     float     sum      -1  1065.16  242.17    0.00       0     0.16   2e+06    0.00       0
+   273678336      68419584     float     sum      -1   398.10  687.46    0.00       0     0.16   2e+06    0.00       0
+   258998272      64749568     float     sum      -1  1069.52  242.16    0.00       0     0.15   2e+06    0.00       0
+   274726912      68681728     float     sum      -1   399.86  687.05    0.00       0     0.16   2e+06    0.00       0
+   275775488      68943872     float     sum      -1   401.29  687.23    0.00       0     0.16   2e+06    0.00       0
+   260046848      65011712     float     sum      -1  1074.27  242.07    0.00       0     0.15   2e+06    0.00       0
+   276824064      69206016     float     sum      -1   402.85  687.16    0.00       0     0.16   2e+06    0.00       0
+   261095424      65273856     float     sum      -1  1077.85  242.24    0.00       0     0.15   2e+06    0.00       0
+   277872640      69468160     float     sum      -1   404.40  687.13    0.00       0     0.16   2e+06    0.00       0
+   262144000      65536000     float     sum      -1  1082.75  242.11    0.00       0     0.16   2e+06    0.00       0
+   278921216      69730304     float     sum      -1   405.92  687.14    0.00       0     0.16   2e+06    0.00       0
+   279969792      69992448     float     sum      -1   407.19  687.57    0.00       0     0.16   2e+06    0.00       0
+   263192576      65798144     float     sum      -1  1086.82  242.17    0.00       0     0.16   2e+06    0.00       0
+   281018368      70254592     float     sum      -1   408.87  687.31    0.00       0     0.16   2e+06    0.00       0
+   264241152      66060288     float     sum      -1  1090.90  242.22    0.00       0     0.16   2e+06    0.00       0
+   282066944      70516736     float     sum      -1   410.15  687.72    0.00       0     0.16   2e+06    0.00       0
+   265289728      66322432     float     sum      -1  1095.27  242.21    0.00       0     0.16   2e+06    0.00       0
+   283115520      70778880     float     sum      -1   411.79  687.52    0.00       0     0.17   2e+06    0.00       0
+   284164096      71041024     float     sum      -1   413.47  687.26    0.00       0     0.16   2e+06    0.00       0
+   266338304      66584576     float     sum      -1  1099.83  242.16    0.00       0     0.16   2e+06    0.00       0
+   285212672      71303168     float     sum      -1   414.93  687.38    0.00       0     0.16   2e+06    0.00       0
+   267386880      66846720     float     sum      -1  1103.95  242.21    0.00       0     0.15   2e+06    0.00       0
+   286261248      71565312     float     sum      -1   416.21  687.77    0.00       0     0.16   2e+06    0.00       0
+   287309824      71827456     float     sum      -1   417.82  687.65    0.00       0     0.16   2e+06    0.00       0
+   268435456      67108864     float     sum      -1  1108.04  242.26    0.00       0     0.16   2e+06    0.00       0
+   288358400      72089600     float     sum      -1   419.28  687.75    0.00       0     0.16   2e+06    0.00       0
+   269484032      67371008     float     sum      -1  1112.65  242.20    0.00       0     0.16   2e+06    0.00       0
+   289406976      72351744     float     sum      -1   420.91  687.58    0.00       0     0.16   2e+06    0.00       0
+   270532608      67633152     float     sum      -1  1116.43  242.32    0.00       0     0.15   2e+06    0.00       0
+   290455552      72613888     float     sum      -1   422.62  687.27    0.00       0     0.16   2e+06    0.00       0
+   291504128      72876032     float     sum      -1   424.00  687.51    0.00       0     0.17   2e+06    0.00       0
+   271581184      67895296     float     sum      -1  1121.38  242.19    0.00       0     0.15   2e+06    0.00       0
+   292552704      73138176     float     sum      -1   425.39  687.73    0.00       0     0.16   2e+06    0.00       0
+   272629760      68157440     float     sum      -1  1125.83  242.16    0.00       0     0.15   2e+06    0.00       0
+   293601280      73400320     float     sum      -1   426.89  687.77    0.00       0     0.16   2e+06    0.00       0
+   294649856      73662464     float     sum      -1   428.34  687.89    0.00       0     0.16   2e+06    0.00       0
+   273678336      68419584     float     sum      -1  1129.30  242.34    0.00       0     0.15   2e+06    0.00       0
+   295698432      73924608     float     sum      -1   429.93  687.79    0.00       0     0.16   2e+06    0.00       0
+   274726912      68681728     float     sum      -1  1133.81  242.30    0.00       0     0.16   2e+06    0.00       0
+   296747008      74186752     float     sum      -1   431.43  687.81    0.00       0     0.16   2e+06    0.00       0
+   275775488      68943872     float     sum      -1  1138.56  242.21    0.00       0     0.17   2e+06    0.00       0
+   297795584      74448896     float     sum      -1   433.06  687.66    0.00       0     0.16   2e+06    0.00       0
+   298844160      74711040     float     sum      -1   434.67  687.51    0.00       0     0.16   2e+06    0.00       0
+   276824064      69206016     float     sum      -1  1142.92  242.21    0.00       0     0.16   2e+06    0.00       0
+   299892736      74973184     float     sum      -1   435.98  687.86    0.00       0     0.16   2e+06    0.00       0
+   277872640      69468160     float     sum      -1  1146.80  242.30    0.00       0     0.15   2e+06    0.00       0
+   300941312      75235328     float     sum      -1   437.49  687.89    0.00       0     0.16   2e+06    0.00       0
+   278921216      69730304     float     sum      -1  1151.66  242.19    0.00       0     0.15   2e+06    0.00       0
+   301989888      75497472     float     sum      -1   439.09  687.76    0.00       0     0.16   2e+06    0.00       0
+   303038464      75759616     float     sum      -1   440.33  688.21    0.00       0     0.16   2e+06    0.00       0
+   279969792      69992448     float     sum      -1  1156.49  242.09    0.00       0     0.15   2e+06    0.00       0
+   304087040      76021760     float     sum      -1   442.14  687.76    0.00       0     0.16   2e+06    0.00       0
+   281018368      70254592     float     sum      -1  1160.24  242.21    0.00       0     0.15   2e+06    0.00       0
+   305135616      76283904     float     sum      -1   443.62  687.83    0.00       0     0.16   2e+06    0.00       0
+   306184192      76546048     float     sum      -1   445.06  687.96    0.00       0     0.16   2e+06    0.00       0
+   282066944      70516736     float     sum      -1  1164.17  242.29    0.00       0     0.15   2e+06    0.00       0
+   307232768      76808192     float     sum      -1   446.55  688.01    0.00       0     0.16   2e+06    0.00       0
+   283115520      70778880     float     sum      -1  1168.43  242.30    0.00       0     0.16   2e+06    0.00       0
+   308281344      77070336     float     sum      -1   448.06  688.03    0.00       0     0.16   2e+06    0.00       0
+   284164096      71041024     float     sum      -1  1173.73  242.10    0.00       0     0.15   2e+06    0.00       0
+   309329920      77332480     float     sum      -1   449.69  687.88    0.00       0     0.16   2e+06    0.00       0
+   310378496      77594624     float     sum      -1   450.98  688.23    0.00       0     0.24   1e+06    0.00       0
+   285212672      71303168     float     sum      -1  1177.11  242.30    0.00       0     0.15   2e+06    0.00       0
+   311427072      77856768     float     sum      -1   452.54  688.17    0.00       0     0.17   2e+06    0.00       0
+   286261248      71565312     float     sum      -1  1181.85  242.21    0.00       0     0.16   2e+06    0.00       0
+   312475648      78118912     float     sum      -1   454.08  688.15    0.00       0     0.16   2e+06    0.00       0
+   313524224      78381056     float     sum      -1   455.53  688.26    0.00       0     0.16   2e+06    0.00       0
+   287309824      71827456     float     sum      -1  1186.15  242.22    0.00       0     0.15   2e+06    0.00       0
+   314572800      78643200     float     sum      -1   457.16  688.10    0.00       0     0.16   2e+06    0.00       0
+   288358400      72089600     float     sum      -1  1189.97  242.32    0.00       0     0.15   2e+06    0.00       0
+   315621376      78905344     float     sum      -1   458.75  688.01    0.00       0     0.16   2e+06    0.00       0
+   316669952      79167488     float     sum      -1   460.10  688.26    0.00       0     0.16   2e+06    0.00       0
+   289406976      72351744     float     sum      -1  1195.10  242.16    0.00       0     0.15   2e+06    0.00       0
+   317718528      79429632     float     sum      -1   461.74  688.09    0.00       0     0.16   2e+06    0.00       0
+   290455552      72613888     float     sum      -1  1198.72  242.31    0.00       0     0.15   2e+06    0.00       0
+   318767104      79691776     float     sum      -1   463.26  688.10    0.00       0     0.16   2e+06    0.00       0
+   319815680      79953920     float     sum      -1   464.81  688.05    0.00       0     0.16   2e+06    0.00       0
+   291504128      72876032     float     sum      -1  1203.11  242.29    0.00       0     0.17   2e+06    0.00       0
+   320864256      80216064     float     sum      -1   466.34  688.04    0.00       0     0.16   2e+06    0.00       0
+   292552704      73138176     float     sum      -1  1207.36  242.31    0.00       0     0.15   2e+06    0.00       0
+   321912832      80478208     float     sum      -1   467.81  688.13    0.00       0     0.17   2e+06    0.00       0
+   322961408      80740352     float     sum      -1   469.40  688.03    0.00       0     0.17   2e+06    0.00       0
+   293601280      73400320     float     sum      -1  1212.28  242.19    0.00       0     0.15   2e+06    0.00       0
+   324009984      81002496     float     sum      -1   470.87  688.10    0.00       0     0.16   2e+06    0.00       0
+   294649856      73662464     float     sum      -1  1216.41  242.23    0.00       0     0.16   2e+06    0.00       0
+   325058560      81264640     float     sum      -1   472.22  688.36    0.00       0     0.16   2e+06    0.00       0
+   295698432      73924608     float     sum      -1  1220.73  242.23    0.00       0     0.15   2e+06    0.00       0
+   326107136      81526784     float     sum      -1   473.87  688.18    0.00       0     0.16   2e+06    0.00       0
+   327155712      81788928     float     sum      -1   475.30  688.32    0.00       0     0.16   2e+06    0.00       0
+   296747008      74186752     float     sum      -1  1225.34  242.17    0.00       0     0.15   2e+06    0.00       0
+   328204288      82051072     float     sum      -1   476.81  688.33    0.00       0     0.16   2e+06    0.00       0
+   297795584      74448896     float     sum      -1  1229.69  242.17    0.00       0     0.15   2e+06    0.00       0
+   329252864      82313216     float     sum      -1   478.33  688.33    0.00       0     0.16   2e+06    0.00       0
+   330301440      82575360     float     sum      -1   480.14  687.92    0.00       0     0.16   2e+06    0.00       0
+   298844160      74711040     float     sum      -1  1233.54  242.27    0.00       0     0.16   2e+06    0.00       0
+   331350016      82837504     float     sum      -1   481.42  688.28    0.00       0     0.24   1e+06    0.00       0
+   299892736      74973184     float     sum      -1  1238.12  242.22    0.00       0     0.16   2e+06    0.00       0
+   332398592      83099648     float     sum      -1   482.79  688.50    0.00       0     0.16   2e+06    0.00       0
+   300941312      75235328     float     sum      -1  1242.23  242.26    0.00       0     0.16   2e+06    0.00       0
+   333447168      83361792     float     sum      -1   484.46  688.28    0.00       0     0.16   2e+06    0.00       0
+   334495744      83623936     float     sum      -1   486.14  688.06    0.00       0     0.16   2e+06    0.00       0
+   301989888      75497472     float     sum      -1  1246.51  242.27    0.00       0     0.16   2e+06    0.00       0
+   335544320      83886080     float     sum      -1   487.32  688.54    0.00       0     0.16   2e+06    0.00       0
+   303038464      75759616     float     sum      -1  1250.93  242.25    0.00       0     0.15   2e+06    0.00       0
+   336592896      84148224     float     sum      -1   489.00  688.33    0.00       0     0.16   2e+06    0.00       0
+   337641472      84410368     float     sum      -1   490.43  688.46    0.00       0     0.16   2e+06    0.00       0
+   304087040      76021760     float     sum      -1  1255.31  242.24    0.00       0     0.15   2e+06    0.00       0
+   338690048      84672512     float     sum      -1   492.04  688.34    0.00       0     0.16   2e+06    0.00       0
+   305135616      76283904     float     sum      -1  1259.54  242.26    0.00       0     0.16   2e+06    0.00       0
+   339738624      84934656     float     sum      -1   493.42  688.54    0.00       0     0.16   2e+06    0.00       0
+   340787200      85196800     float     sum      -1   494.89  688.61    0.00       0     0.16   2e+06    0.00       0
+   306184192      76546048     float     sum      -1  1264.02  242.23    0.00       0     0.16   2e+06    0.00       0
+   341835776      85458944     float     sum      -1   496.49  688.50    0.00       0     0.16   2e+06    0.00       0
+   307232768      76808192     float     sum      -1  1268.62  242.18    0.00       0     0.15   2e+06    0.00       0
+   342884352      85721088     float     sum      -1   498.16  688.30    0.00       0     0.16   2e+06    0.00       0
+   308281344      77070336     float     sum      -1  1272.42  242.28    0.00       0     0.16   2e+06    0.00       0
+   343932928      85983232     float     sum      -1   499.73  688.24    0.00       0     0.16   2e+06    0.00       0
+   344981504      86245376     float     sum      -1   501.04  688.53    0.00       0     0.17   2e+06    0.00       0
+   309329920      77332480     float     sum      -1  1276.46  242.34    0.00       0     0.16   2e+06    0.00       0
+   346030080      86507520     float     sum      -1   502.52  688.59    0.00       0     0.16   2e+06    0.00       0
+   310378496      77594624     float     sum      -1  1281.23  242.25    0.00       0     0.16   2e+06    0.00       0
+   347078656      86769664     float     sum      -1   504.00  688.65    0.00       0     0.16   2e+06    0.00       0

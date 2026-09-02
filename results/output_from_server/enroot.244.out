@@ -1,0 +1,62 @@
+[INFO] Querying registry for permission grant
+[INFO] Authenticating with user: <anonymous>
+[INFO] Authentication succeeded
+[INFO] Fetching image manifest list
+[INFO] Fetching image manifest
+[INFO] Downloading 1 missing layers...
+[INFO] Extracting image layers...
+[INFO] Converting whiteouts...
+[INFO] Creating squashfs filesystem...
+Parallel mksquashfs: Using 1 processor
+Creating 4.0 filesystem on /lambda/nfs/AIML/home/majid/alpine.sqsh, block size 131072.
+
+Exportable Squashfs 4.0 filesystem, lzo compressed, data block size 131072
+	uncompressed data, compressed metadata, compressed fragments,
+	compressed xattrs, compressed ids
+	duplicates are removed
+Filesystem size 7878.09 Kbytes (7.69 Mbytes)
+	95.23% of uncompressed filesystem size (8272.31 Kbytes)
+Inode table size 4379 bytes (4.28 Kbytes)
+	22.91% of uncompressed inode table size (19114 bytes)
+Directory table size 5726 bytes (5.59 Kbytes)
+	57.75% of uncompressed directory table size (9916 bytes)
+Number of duplicate files found 6
+Number of inodes 520
+Number of files 87
+Number of fragments 6
+Number of symbolic links 335
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 98
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)
+[INFO] Extracting squashfs filesystem...
+Parallel unsquashfs: Using 1 processor
+422 inodes (478 blocks) to write
+
+
+created 87 files
+created 98 directories
+created 335 symlinks
+created 0 devices
+created 0 fifos
+created 0 sockets
+Usage: enroot start [options] [--] NAME|IMAGE [COMMAND] [ARG...]
+
+Start a container and invoke the command script within its root filesystem.
+Command and arguments are passed to the script as input parameters.
+
+In the absence of a command script and if a command was given, it will be executed directly.
+Otherwise, an interactive shell will be started within the container.
+
+ Options:
+   -c, --conf CONFIG    Specify a configuration script to run before the container starts
+   -e, --env KEY[=VAL]  Export an environment variable inside the container
+       --rc SCRIPT      Override the command script inside the container
+   -r, --root           Ask to be remapped to root inside the container
+   -w, --rw             Make the container root filesystem writable
+   -m, --mount FSTAB    Perform a mount from the host inside the container (colon-separated)

@@ -1,0 +1,7 @@
+Testing CPU communication between nodes...
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+Hello World from Rank 0 out of 2 ranks on host node-01
+Hello World from Rank 1 out of 2 ranks on host node-02

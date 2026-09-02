@@ -1,0 +1,55 @@
+2026-01-05 03:43:54.094600: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-01-05 03:43:54.158073: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1767584634.149716   49612 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1767584634.167578   49612 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1767584634.263051   13075 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+W0000 00:00:1767584634.264241   49612 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767584634.264276   49612 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767584634.264279   49612 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767584634.264281   49612 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1767584634.294451   13075 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1767584634.504931   13075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767584634.504956   13075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767584634.504959   13075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767584634.504962   13075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-520_0zmg because the default path (/home/majid/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-fbtd5b_c because the default path (/home/majid/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+I0000 00:00:1767584640.079639   49612 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+I0000 00:00:1767584640.090389   49612 gpu_device.cc:2019] Created device /job:worker/replica:0/task:1/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1767584640.102618   49612 grpc_server_lib.cc:463] Started server with target: grpc://node-02:12345
+I0000 00:00:1767584640.653625   13075 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+I0000 00:00:1767584640.664136   13075 gpu_device.cc:2019] Created device /job:worker/replica:0/task:0/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+2026-01-05 03:44:00.676103: I external/local_xla/xla/tsl/distributed_runtime/coordination/coordination_service.cc:637] Initializing CoordinationService
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1767584640.676996   13075 grpc_server_lib.cc:463] Started server with target: grpc://node-01:12345
+2026-01-05 03:44:00.694364: I external/local_xla/xla/tsl/distributed_runtime/coordination/coordination_service.cc:378] /job:worker/replica:0/task:0 has connected to coordination service. Incarnation: 10701059203656522162
+2026-01-05 03:44:00.694395: I external/local_xla/xla/tsl/distributed_runtime/coordination/coordination_service.cc:816] Waiting for 1/2 tasks to connect.
+2026-01-05 03:44:00.694399: I external/local_xla/xla/tsl/distributed_runtime/coordination/coordination_service.cc:819] Example stragglers:
+/job:worker/replica:0/task:1
+I0000 00:00:1767584640.694571   13075 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+2026-01-05 03:44:01.131370: I external/local_xla/xla/tsl/distributed_runtime/coordination/coordination_service.cc:378] /job:worker/replica:0/task:1 has connected to coordination service. Incarnation: 12384532927103574195
+2026-01-05 03:44:01.131417: I external/local_xla/xla/tsl/distributed_runtime/coordination/coordination_service.cc:816] Waiting for 0/2 tasks to connect.
+I0000 00:00:1767584641.138053   49612 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+Rank 0 successfully initialized MultiWorkerMirroredStrategy
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf.py", line 36, in <module>
+Rank 1 successfully initialized MultiWorkerMirroredStrategy
+    variable = tf.Variable(tf.random.normal([20480, 20480]))
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/lib/python3/dist-packages/tensorflow/python/framework/random_seed.py", line 84, in get_seed
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf.py", line 36, in <module>
+    raise RuntimeError(  # pylint: disable=g-doc-exception
+RuntimeError: Random ops require a seed to be set when determinism is enabled. Please set a seed before running the op, e.g. by calling tf.random.set_seed(1).
+    variable = tf.Variable(tf.random.normal([20480, 20480]))
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/lib/python3/dist-packages/tensorflow/python/framework/random_seed.py", line 84, in get_seed
+    raise RuntimeError(  # pylint: disable=g-doc-exception
+RuntimeError: Random ops require a seed to be set when determinism is enabled. Please set a seed before running the op, e.g. by calling tf.random.set_seed(1).
+srun: error: node-02: task 1: Exited with exit code 1
+srun: error: node-01: task 0: Exited with exit code 1

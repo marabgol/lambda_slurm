@@ -1,0 +1,173 @@
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 17179869184 step: 1048576(bytes) warmup iters: 5 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid   9409 on    node-01 device  0 [0000:07:00] NVIDIA A100-SXM4-40GB
+#  Rank  1 Group  0 Pid  10322 on    node-02 device  0 [0000:07:00] NVIDIA A100-SXM4-40GB
+#
+# Reducing maxBytes to 12703978837 due to memory limitation
+node-01:9409:9409 [0] NCCL INFO Bootstrap: Using eno1:10.19.95.109<0>
+node-01:9409:9409 [0] NCCL INFO NCCL_COMM_ID set by environment to 10.19.95.109:12345
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+node-01:9409:9409 [0] NCCL INFO cudaDriverVersion 12080
+node-02:10322:10322 [0] NCCL INFO cudaDriverVersion 12080
+node-01:9409:9409 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-01:9409:9409 [0] NCCL INFO NCCL_COMM_ID set by environment to 10.19.95.109:12345
+node-02:10322:10322 [0] NCCL INFO Bootstrap: Using eno1:10.19.92.44<0>
+node-02:10322:10322 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-01:9409:9420 [0] NCCL INFO NET/Plugin: Failed to find ncclNetPlugin_v10 symbol.
+node-01:9409:9420 [0] NCCL INFO NET/Plugin: Failed to find ncclNetPlugin_v9 symbol.
+node-01:9409:9420 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v8 (v8)
+node-01:9409:9420 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v10 symbol.
+node-01:9409:9420 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v9 symbol.
+node-01:9409:9420 [0] NCCL INFO NET/Plugin: Loaded collnet plugin SHARP (v8)
+node-01:9409:9420 [0] NCCL INFO Plugin Path : /lambda/nfs/AIML/hpcx/hpcx-v2.21.3-gcc-doca_ofed-ubuntu22.04-cuda12-x86_64/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+node-01:9409:9420 [0] NCCL INFO P2P plugin v8 IBext_v8
+node-01:9409:9420 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:10322:10334 [0] NCCL INFO NET/Plugin: Failed to find ncclNetPlugin_v10 symbol.
+node-02:10322:10334 [0] NCCL INFO NET/Plugin: Failed to find ncclNetPlugin_v9 symbol.
+node-02:10322:10334 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v8 (v8)
+node-02:10322:10334 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v10 symbol.
+node-02:10322:10334 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v9 symbol.
+node-02:10322:10334 [0] NCCL INFO NET/Plugin: Loaded collnet plugin SHARP (v8)
+node-02:10322:10334 [0] NCCL INFO Plugin Path : /lambda/nfs/AIML/hpcx/hpcx-v2.21.3-gcc-doca_ofed-ubuntu22.04-cuda12-x86_64/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+node-02:10322:10334 [0] NCCL INFO P2P plugin v8 IBext_v8
+node-02:10322:10334 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:9409:9420 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.95.109<0>
+node-01:9409:9420 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+node-01:9409:9420 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:9409:9420 [0] NCCL INFO NCCL_IB_HCA set to mlx5_0:1
+node-02:10322:10334 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.92.44<0>
+node-02:10322:10334 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+node-01:9409:9420 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.95.109<0>
+node-01:9409:9420 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-01:9409:9420 [0] NCCL INFO Using network IB
+node-02:10322:10334 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:10322:10334 [0] NCCL INFO NCCL_IB_HCA set to mlx5_0:1
+node-02:10322:10334 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.92.44<0>
+node-02:10322:10334 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-02:10322:10334 [0] NCCL INFO Using network IB
+node-01:9409:9420 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-01:9409:9420 [0] NCCL INFO ncclCommInitRankConfig comm 0x574d7d2dd880 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x6269750d5e3a5080 - Init START
+node-01:9409:9420 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-01:9409:9420 [0] NCCL INFO Bootstrap timings total 0.001273 (create 0.000034, send 0.000141, recv 0.000444, ring 0.000158, delay 0.000000)
+node-02:10322:10334 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-02:10322:10334 [0] NCCL INFO ncclCommInitRankConfig comm 0x581b2bfa7de0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x6269750d5e3a5080 - Init START
+node-01:9409:9420 [0] NCCL INFO comm 0x574d7d2dd880 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-01:9409:9420 [0] NCCL INFO Channel 00/02 : 0 1
+node-01:9409:9420 [0] NCCL INFO Channel 01/02 : 0 1
+node-01:9409:9420 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+node-01:9409:9420 [0] NCCL INFO P2P Chunksize set to 131072
+node-01:9409:9420 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-01:9409:9424 [0] NCCL INFO [Proxy Service] Device 0 CPU core 6
+node-01:9409:9425 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 8
+node-01:9409:9420 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-01:9409:9420 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-01:9409:9420 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:9409:9420 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-01:9409:9420 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-01:9409:9420 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-01:9409:9420 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-01:9409:9420 [0] NCCL INFO ncclCommInitRankConfig comm 0x574d7d2dd880 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x6269750d5e3a5080 - Init COMPLETE
+node-01:9409:9420 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.19 (kernels 0.16, alloc 0.03, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong 
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)         
+node-02:10322:10334 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-02:10322:10334 [0] NCCL INFO Bootstrap timings total 0.006355 (create 0.000035, send 0.000341, recv 0.005242, ring 0.000116, delay 0.000000)
+node-02:10322:10334 [0] NCCL INFO comm 0x581b2bfa7de0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-02:10322:10334 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+node-02:10322:10334 [0] NCCL INFO P2P Chunksize set to 131072
+node-02:10322:10338 [0] NCCL INFO [Proxy Service] Device 0 CPU core 4
+node-02:10322:10339 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 5
+node-02:10322:10334 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-02:10322:10334 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-01:9409:9427 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 10
+node-01:9409:9426 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+node-01:9409:9426 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+node-01:9409:9426 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IB/1
+node-01:9409:9426 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IB/1
+node-01:9409:9424 [0] NCCL INFO NCCL_IB_GID_INDEX set by environment to 3.
+node-01:9409:9424 [0] NCCL INFO NCCL_IB_TC set by environment to 106.
+node-01:9409:9424 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 22.
+node-01:9409:9424 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 7.
+node-02:10322:10334 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-02:10322:10334 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-02:10322:10334 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-02:10322:10334 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-02:10322:10334 [0] NCCL INFO ncclCommInitRankConfig comm 0x581b2bfa7de0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x6269750d5e3a5080 - Init COMPLETE
+node-02:10322:10334 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.19 (kernels 0.15, alloc 0.03, bootstrap 0.01, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+node-02:10322:10341 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 8
+node-02:10322:10340 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/IB/1
+node-02:10322:10340 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/IB/1
+node-02:10322:10340 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/IB/1
+node-02:10322:10340 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/IB/1
+node-02:10322:10338 [0] NCCL INFO NCCL_IB_GID_INDEX set by environment to 3.
+node-02:10322:10338 [0] NCCL INFO NCCL_IB_TC set by environment to 106.
+node-02:10322:10338 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 22.
+node-02:10322:10338 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 7.
+node-01:9409:9426 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+node-02:10322:10340 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+     8388608       2097152     float     sum      -1  30953.8    0.27    0.27       0  30987.5    0.27    0.27       0
+     9437184       2359296     float     sum      -1  34697.9    0.27    0.27       0  34678.3    0.27    0.27       0
+    10485760       2621440     float     sum      -1  38513.6    0.27    0.27       0  38504.4    0.27    0.27       0
+    11534336       2883584     float     sum      -1  42357.7    0.27    0.27       0  42385.5    0.27    0.27       0
+    12582912       3145728     float     sum      -1  46159.1    0.27    0.27       0  46180.2    0.27    0.27       0
+    13631488       3407872     float     sum      -1  49996.8    0.27    0.27       0  49965.7    0.27    0.27       0
+    14680064       3670016     float     sum      -1  53866.6    0.27    0.27       0  53864.7    0.27    0.27       0
+    15728640       3932160     float     sum      -1  57538.1    0.27    0.27       0  57633.5    0.27    0.27       0
+    16777216       4194304     float     sum      -1  61425.3    0.27    0.27       0  61449.4    0.27    0.27       0
+    17825792       4456448     float     sum      -1  65386.8    0.27    0.27       0  65645.5    0.27    0.27       0
+    18874368       4718592     float     sum      -1  69253.3    0.27    0.27       0  69285.3    0.27    0.27       0
+    19922944       4980736     float     sum      -1  73067.3    0.27    0.27       0  72974.0    0.27    0.27       0
+    20971520       5242880     float     sum      -1  76779.2    0.27    0.27       0  76846.9    0.27    0.27       0
+    22020096       5505024     float     sum      -1  80599.0    0.27    0.27       0  80567.8    0.27    0.27       0
+    23068672       5767168     float     sum      -1  84275.8    0.27    0.27       0  84351.0    0.27    0.27       0
+    24117248       6029312     float     sum      -1  88090.0    0.27    0.27       0  88082.8    0.27    0.27       0
+    25165824       6291456     float     sum      -1  91958.5    0.27    0.27       0  91968.3    0.27    0.27       0
+    26214400       6553600     float     sum      -1  96047.6    0.27    0.27       0  96137.8    0.27    0.27       0
+    27262976       6815744     float     sum      -1  99804.7    0.27    0.27       0  99679.5    0.27    0.27       0
+    28311552       7077888     float     sum      -1   103419    0.27    0.27       0   103762    0.27    0.27       0
+    29360128       7340032     float     sum      -1   107539    0.27    0.27       0   107498    0.27    0.27       0
+    30408704       7602176     float     sum      -1   111096    0.27    0.27       0   110789    0.27    0.27       0
+    31457280       7864320     float     sum      -1   115130    0.27    0.27       0   114639    0.27    0.27       0
+    32505856       8126464     float     sum      -1   118840    0.27    0.27       0   119022    0.27    0.27       0
+    33554432       8388608     float     sum      -1   122640    0.27    0.27       0   122771    0.27    0.27       0
+    34603008       8650752     float     sum      -1   126456    0.27    0.27       0   126878    0.27    0.27       0
+    35651584       8912896     float     sum      -1   130379    0.27    0.27       0   130517    0.27    0.27       0
+    36700160       9175040     float     sum      -1   134186    0.27    0.27       0   134074    0.27    0.27       0
+    37748736       9437184     float     sum      -1   138009    0.27    0.27       0   137972    0.27    0.27       0
+    38797312       9699328     float     sum      -1   141652    0.27    0.27       0   141614    0.27    0.27       0
+    39845888       9961472     float     sum      -1   145661    0.27    0.27       0   145781    0.27    0.27       0
+    40894464      10223616     float     sum      -1   149414    0.27    0.27       0   149440    0.27    0.27       0
+    41943040      10485760     float     sum      -1   153251    0.27    0.27       0   152743    0.27    0.27       0
+    42991616      10747904     float     sum      -1   157090    0.27    0.27       0   157099    0.27    0.27       0
+    44040192      11010048     float     sum      -1   160926    0.27    0.27       0   161051    0.27    0.27       0
+    45088768      11272192     float     sum      -1   164845    0.27    0.27       0   164781    0.27    0.27       0
+    46137344      11534336     float     sum      -1   168607    0.27    0.27       0   168706    0.27    0.27       0
+    47185920      11796480     float     sum      -1   172450    0.27    0.27       0   172562    0.27    0.27       0
+    48234496      12058624     float     sum      -1   176143    0.27    0.27       0   176254    0.27    0.27       0
+    49283072      12320768     float     sum      -1   180137    0.27    0.27       0   179914    0.27    0.27       0
+    50331648      12582912     float     sum      -1   183743    0.27    0.27       0   184023    0.27    0.27       0
+    51380224      12845056     float     sum      -1   187814    0.27    0.27       0   187504    0.27    0.27       0
+    52428800      13107200     float     sum      -1   191637    0.27    0.27       0   191398    0.27    0.27       0
+    53477376      13369344     float     sum      -1   195103    0.27    0.27       0   195438    0.27    0.27       0
+    54525952      13631488     float     sum      -1   199095    0.27    0.27       0   199006    0.27    0.27       0
+    55574528      13893632     float     sum      -1   202738    0.27    0.27       0   202945    0.27    0.27       0
+    56623104      14155776     float     sum      -1   206687    0.27    0.27       0   206391    0.27    0.27       0
+    57671680      14417920     float     sum      -1   210388    0.27    0.27       0   210375    0.27    0.27       0
+    58720256      14680064     float     sum      -1   214404    0.27    0.27       0   214299    0.27    0.27       0
+    59768832      14942208     float     sum      -1   218323    0.27    0.27       0   218233    0.27    0.27       0
+    60817408      15204352     float     sum      -1   222059    0.27    0.27       0   222122    0.27    0.27       0
+    61865984      15466496     float     sum      -1   225898    0.27    0.27       0   226140    0.27    0.27       0
+    62914560      15728640     float     sum      -1   230001    0.27    0.27       0   229926    0.27    0.27       0
+    63963136      15990784     float     sum      -1   233784    0.27    0.27       0   233628    0.27    0.27       0
+    65011712      16252928     float     sum      -1   237387    0.27    0.27       0   237366    0.27    0.27       0
+    66060288      16515072     float     sum      -1   241690    0.27    0.27       0   241347    0.27    0.27       0
+    67108864      16777216     float     sum      -1   244657    0.27    0.27       0   244872    0.27    0.27       0
+slurmstepd: error: *** JOB 202 ON node-01 CANCELLED AT 2026-01-04T14:27:22 ***

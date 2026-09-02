@@ -1,0 +1,84 @@
+Detecting VPN IPs...
+2026-01-14 04:18:07.780332: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1768364287.794701   12478 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1768364287.799392   12478 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1768364287.810484   12478 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364287.810505   12478 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364287.810507   12478 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364287.810509   12478 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-01-14 04:18:07.840178: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1768364287.854645   12951 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1768364287.859301   12951 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1768364287.870391   12951 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364287.870412   12951 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364287.870414   12951 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364287.870415   12951 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+Rank 0 attempting to initialize Strategy...
+Rank 1 attempting to initialize Strategy...
+I0000 00:00:1768364290.478507   12478 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+I0000 00:00:1768364290.488398   12478 gpu_device.cc:2019] Created device /job:worker/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768364290.494907   12478 grpc_server_lib.cc:463] Started server with target: grpc://192.168.37.3:12345
+I0000 00:00:1768364290.500141   12478 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+I0000 00:00:1768364290.528836   12951 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+I0000 00:00:1768364290.536891   12951 gpu_device.cc:2019] Created device /job:worker/replica:0/task:1/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768364290.543652   12951 grpc_server_lib.cc:463] Started server with target: grpc://192.168.37.4:12345
+I0000 00:00:1768364290.576440   12951 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+Rank 0 strategy initialized!
+Rank 1 strategy initialized!
+node-01:12478:12610 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.3<0>
+node-01:12478:12610 [0] NCCL INFO NCCL_COMM_ID set by environment to 192.168.37.3:12346
+Starting 1000 iterations...
+2026-01-14 04:18:21.595679: E tensorflow/core/common_runtime/base_collective_executor.cc:248] BaseCollectiveExecutor::StartAbort DEADLINE_EXCEEDED: Deadline Exceeded
+
+RPC: /tensorflow.CoordinationService/Heartbeat
+2026-01-14 04:18:21.605755: E tensorflow/core/common_runtime/ring_alg.cc:291] Aborting RingReduce with DEADLINE_EXCEEDED: Collective ops is aborted by: Deadline Exceeded
+
+RPC: /tensorflow.CoordinationService/Heartbeat
+The error could be from a previous operation. Restart your program to reset.
+Additional GRPC error information from remote target /job:worker/replica:0/task:1 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1768364301.605667416","description":"Error received from peer ipv4:192.168.37.4:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Collective ops is aborted by: Deadline Exceeded\n\nRPC: /tensorflow.CoordinationService/Heartbeat\nThe error could be from a previous operation. Restart your program to reset.","grpc_status":4} [type.googleapis.com/tensorflow.DerivedStatus='']
+2026-01-14 04:18:21.605782: E tensorflow/core/common_runtime/base_collective_executor.cc:248] BaseCollectiveExecutor::StartAbort DEADLINE_EXCEEDED: Collective ops is aborted by: Deadline Exceeded
+
+RPC: /tensorflow.CoordinationService/Heartbeat
+The error could be from a previous operation. Restart your program to reset.
+Additional GRPC error information from remote target /job:worker/replica:0/task:1 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1768364301.605667416","description":"Error received from peer ipv4:192.168.37.4:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Collective ops is aborted by: Deadline Exceeded\n\nRPC: /tensorflow.CoordinationService/Heartbeat\nThe error could be from a previous operation. Restart your program to reset.","grpc_status":4} [type.googleapis.com/tensorflow.DerivedStatus='']
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 48, in <module>
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 35, in <module>
+    stress_step(v)
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/lib/python3/dist-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.DeadlineExceededError: Graph execution error:
+
+Detected at node CollectiveReduceV2 defined at (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 48, in <module>
+
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 40, in stress_step
+
+Collective ops is aborted by: Collective ops is aborted by: Deadline Exceeded
+
+RPC: /tensorflow.CoordinationService/Heartbeat
+The error could be from a previous operation. Restart your program to reset.
+Additional GRPC error information from remote target /job:worker/replica:0/task:1 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1768364301.605667416","description":"Error received from peer ipv4:192.168.37.4:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Collective ops is aborted by: Deadline Exceeded\n\nRPC: /tensorflow.CoordinationService/Heartbeat\nThe error could be from a previous operation. Restart your program to reset.","grpc_status":4}
+The error could be from a previous operation. Restart your program to reset.
+	 [[{{node CollectiveReduceV2}}]] [Op:__inference_stress_step_44]
+    v = tf.Variable(tf.random.normal([20480, 20480]))
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/lib/python3/dist-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.DeadlineExceededError: {{function_node __wrapped__CollectiveBcastRecv_device_/job:worker/replica:0/task:1/device:GPU:0}} Collective ops is aborted by: Deadline Exceeded
+
+RPC: /tensorflow.CoordinationService/Heartbeat
+The error could be from a previous operation. Restart your program to reset. [Op:CollectiveBcastRecv]
+srun: error: node-02: task 1: Exited with exit code 1
+srun: error: node-01: task 0: Exited with exit code 1

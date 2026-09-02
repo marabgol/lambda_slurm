@@ -1,0 +1,114 @@
+slurmstepd: error: couldn't chdir to `/home/majid': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/home/majid': No such file or directory: going to /tmp instead
+Job 170 starting with 2 ranks on node-01:1,node-02:1
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 2147483648 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid   8564 on    node-01 device  0 [0000:07:00] NVIDIA A100-SXM4-40GB
+#  Rank  1 Group  0 Pid   8423 on    node-02 device  0 [0000:07:00] NVIDIA A100-SXM4-40GB
+node-01:8564:8564 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:8564:8564 [0] NCCL INFO Bootstrap: Using eno1:10.19.86.104<0>
+node-01:8564:8564 [0] NCCL INFO cudaDriverVersion 12080
+node-02:8423:8423 [0] NCCL INFO cudaDriverVersion 12080
+node-01:8564:8564 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-02:8423:8423 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:8423:8423 [0] NCCL INFO Bootstrap: Using eno1:10.19.83.130<0>
+node-02:8423:8423 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-02:8423:8432 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-02:8423:8432 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-02:8423:8432 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-02:8423:8432 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-02:8423:8432 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:8423:8432 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.83.130<0>
+node-02:8423:8432 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+node-02:8423:8432 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:8423:8432 [0] NCCL INFO NET/Socket : Using [0]eno1:10.19.83.130<0>
+node-02:8423:8432 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-02:8423:8432 [0] NCCL INFO Using network Socket
+node-01:8564:8574 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-01:8564:8574 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-01:8564:8574 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-01:8564:8574 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-01:8564:8574 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:8564:8574 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.86.104<0>
+node-01:8564:8574 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+node-01:8564:8574 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:8564:8574 [0] NCCL INFO NET/Socket : Using [0]eno1:10.19.86.104<0>
+node-01:8564:8574 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-01:8564:8574 [0] NCCL INFO Using network Socket
+node-02:8423:8432 [0] NCCL INFO ncclCommInitRankConfig comm 0x63eaed758430 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xd0e530d57265423b - Init START
+node-01:8564:8574 [0] NCCL INFO ncclCommInitRankConfig comm 0x5924c81a8170 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xd0e530d57265423b - Init START
+node-01:8564:8574 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-02:8423:8432 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-01:8564:8574 [0] NCCL INFO Bootstrap timings total 0.001416 (create 0.000035, send 0.000158, recv 0.000403, ring 0.000246, delay 0.000000)
+node-02:8423:8432 [0] NCCL INFO Bootstrap timings total 0.018559 (create 0.000035, send 0.000285, recv 0.017322, ring 0.000107, delay 0.000000)
+node-01:8564:8574 [0] NCCL INFO comm 0x5924c81a8170 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-01:8564:8574 [0] NCCL INFO Channel 00/02 : 0 1
+node-01:8564:8574 [0] NCCL INFO Channel 01/02 : 0 1
+node-01:8564:8574 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+node-01:8564:8574 [0] NCCL INFO P2P Chunksize set to 131072
+node-01:8564:8574 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-01:8564:8577 [0] NCCL INFO [Proxy Service] Device 0 CPU core 5
+node-01:8564:8578 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 6
+node-02:8423:8432 [0] NCCL INFO comm 0x63eaed758430 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-02:8423:8432 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+node-02:8423:8432 [0] NCCL INFO P2P Chunksize set to 131072
+node-02:8423:8435 [0] NCCL INFO [Proxy Service] Device 0 CPU core 6
+node-02:8423:8436 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 7
+node-01:8564:8574 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-01:8564:8574 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-02:8423:8432 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-02:8423:8432 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-01:8564:8574 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:8564:8574 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-01:8564:8574 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-01:8564:8574 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-01:8564:8574 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-01:8564:8574 [0] NCCL INFO ncclCommInitRankConfig comm 0x5924c81a8170 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xd0e530d57265423b - Init COMPLETE
+node-01:8564:8574 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.27 (kernels 0.24, alloc 0.02, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+node-02:8423:8432 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-02:8423:8432 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-02:8423:8432 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-02:8423:8432 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-02:8423:8432 [0] NCCL INFO ncclCommInitRankConfig comm 0x63eaed758430 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xd0e530d57265423b - Init COMPLETE
+node-02:8423:8432 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.27 (kernels 0.22, alloc 0.02, bootstrap 0.02, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong 
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)         
+node-01:8564:8580 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 10
+node-02:8423:8438 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 8
+node-02:8423:8437 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+node-02:8423:8437 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+node-02:8423:8437 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+node-02:8423:8437 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+node-01:8564:8579 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+node-01:8564:8579 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+node-01:8564:8579 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+node-01:8564:8579 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+node-01:8564:8579 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+node-02:8423:8437 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+     8388608       2097152     float     sum      -1  28210.6    0.30    0.30       0  27477.2    0.31    0.31       0
+     9437184       2359296     float     sum      -1  29826.7    0.32    0.32       0  30189.3    0.31    0.31       0
+    10485760       2621440     float     sum      -1  32664.5    0.32    0.32       0  32768.3    0.32    0.32       0
+    11534336       2883584     float     sum      -1  36038.9    0.32    0.32       0  36392.6    0.32    0.32       0
+    12582912       3145728     float     sum      -1  39346.0    0.32    0.32       0  39297.9    0.32    0.32       0
+    13631488       3407872     float     sum      -1  42355.0    0.32    0.32       0  42545.2    0.32    0.32       0
+    14680064       3670016     float     sum      -1  45714.2    0.32    0.32       0  45939.9    0.32    0.32       0
+    15728640       3932160     float     sum      -1  48765.9    0.32    0.32       0  49037.0    0.32    0.32       0
+    16777216       4194304     float     sum      -1  52178.3    0.32    0.32       0  52518.5    0.32    0.32       0
+    17825792       4456448     float     sum      -1  55549.5    0.32    0.32       0  55840.4    0.32    0.32       0
+    18874368       4718592     float     sum      -1  58707.8    0.32    0.32       0  58742.2    0.32    0.32       0
+    19922944       4980736     float     sum      -1  62152.0    0.32    0.32       0  61831.5    0.32    0.32       0
+    20971520       5242880     float     sum      -1  64979.1    0.32    0.32       0  65211.4    0.32    0.32       0
+    22020096       5505024     float     sum      -1  68368.5    0.32    0.32       0  68869.1    0.32    0.32       0
+    23068672       5767168     float     sum      -1  71228.4    0.32    0.32       0  71579.5    0.32    0.32       0
+    24117248       6029312     float     sum      -1  75107.7    0.32    0.32       0  74862.6    0.32    0.32       0
+    25165824       6291456     float     sum      -1  78741.2    0.32    0.32       0  78438.2    0.32    0.32       0
+slurmstepd: error: *** JOB 170 ON node-01 CANCELLED AT 2026-01-03T17:22:31 ***

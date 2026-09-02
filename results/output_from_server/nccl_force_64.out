@@ -1,0 +1,6 @@
+srun: error: node-01: task 0: Exited with exit code 127
+0: Node: node-01 | IP: 10.19.84.113 | Assigned NCCL_RANK: 0
+0: /usr/bin/bash: line 16: -b: command not found
+1: Node: node-02 | IP: 10.19.81.68 | Assigned NCCL_RANK: 1
+1: /usr/bin/bash: line 16: -b: command not found
+srun: error: node-02: task 1: Exited with exit code 127

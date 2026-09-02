@@ -1,0 +1,6 @@
+*.key
+munge.key
+slurmdbd.conf
+*.deb
+__pycache__/
+*.pyc

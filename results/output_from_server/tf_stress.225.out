@@ -1,0 +1,77 @@
+Detecting VPN IPs...
+2026-01-05 03:53:20.344660: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1767585200.363342   13836 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1767585200.369469   13836 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1767585200.385199   13836 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767585200.385223   13836 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767585200.385226   13836 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767585200.385228   13836 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-01-05 03:53:20.429928: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1767585200.448403   60167 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1767585200.454480   60167 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1767585200.470232   60167 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767585200.470252   60167 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767585200.470254   60167 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767585200.470256   60167 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ph_kjp4v because the default path (/home/majid/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-vkwx2pg8 because the default path (/home/majid/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Rank 0 attempting to initialize Strategy...
+Rank 1 attempting to initialize Strategy...
+I0000 00:00:1767585204.298485   13836 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+I0000 00:00:1767585204.309079   13836 gpu_device.cc:2019] Created device /job:worker/replica:0/task:0/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1767585204.320638   13836 grpc_server_lib.cc:463] Started server with target: grpc://192.168.37.3:12345
+I0000 00:00:1767585204.326500   13836 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+I0000 00:00:1767585204.363935   60167 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+I0000 00:00:1767585204.374141   60167 gpu_device.cc:2019] Created device /job:worker/replica:0/task:1/device:GPU:0 with 38485 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:07:00.0, compute capability: 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1767585204.384624   60167 grpc_server_lib.cc:463] Started server with target: grpc://192.168.37.4:12345
+I0000 00:00:1767585204.424024   60167 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+Rank 0 strategy initialized!
+Rank 1 strategy initialized!
+node-01:13836:13971 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.3<0>
+node-01:13836:13971 [0] NCCL INFO NCCL_COMM_ID set by environment to 192.168.37.3:12346
+Starting 1000 iterations...
+2026-01-05 03:53:40.459130: E tensorflow/core/common_runtime/base_collective_executor.cc:248] BaseCollectiveExecutor::StartAbort DEADLINE_EXCEEDED: Deadline Exceeded
+
+RPC: /tensorflow.CoordinationService/Heartbeat
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 35, in <module>
+    v = tf.Variable(tf.random.normal([20480, 20480]))
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/lib/python3/dist-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.DeadlineExceededError: {{function_node __wrapped__CollectiveBcastRecv_device_/job:worker/replica:0/task:1/device:GPU:0}} Collective ops is aborted by: Deadline Exceeded
+
+RPC: /tensorflow.CoordinationService/Heartbeat
+The error could be from a previous operation. Restart your program to reset. [Op:CollectiveBcastRecv]
+2026-01-05 03:53:41.821623: E tensorflow/core/common_runtime/ring_alg.cc:291] Aborting RingReduce with UNAVAILABLE: failed to connect to all addresses
+Additional GRPC error information from remote target /job:worker/replica:0/task:1 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1767585221.821535861","description":"Failed to pick subchannel","file":"external/com_github_grpc_grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3941,"referenced_errors":[{"created":"@1767585221.821532372","description":"failed to connect to all addresses","file":"external/com_github_grpc_grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":393,"grpc_status":14}]}
+2026-01-05 03:53:41.821670: E tensorflow/core/common_runtime/base_collective_executor.cc:248] BaseCollectiveExecutor::StartAbort UNAVAILABLE: failed to connect to all addresses
+Additional GRPC error information from remote target /job:worker/replica:0/task:1 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1767585221.821535861","description":"Failed to pick subchannel","file":"external/com_github_grpc_grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3941,"referenced_errors":[{"created":"@1767585221.821532372","description":"failed to connect to all addresses","file":"external/com_github_grpc_grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":393,"grpc_status":14}]}
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 48, in <module>
+    stress_step(v)
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/lib/python3/dist-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.UnavailableError: Graph execution error:
+
+Detected at node CollectiveReduceV2 defined at (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 48, in <module>
+
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_3.py", line 40, in stress_step
+
+Collective ops is aborted by: failed to connect to all addresses
+Additional GRPC error information from remote target /job:worker/replica:0/task:1 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1767585221.821535861","description":"Failed to pick subchannel","file":"external/com_github_grpc_grpc/src/core/ext/filters/client_channel/client_channel.cc","file_line":3941,"referenced_errors":[{"created":"@1767585221.821532372","description":"failed to connect to all addresses","file":"external/com_github_grpc_grpc/src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":393,"grpc_status":14}]}
+The error could be from a previous operation. Restart your program to reset.
+	 [[{{node CollectiveReduceV2}}]] [Op:__inference_stress_step_44]
+srun: error: node-02: task 1: Exited with exit code 1
+srun: error: node-01: task 0: Exited with exit code 1

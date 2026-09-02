@@ -1,0 +1,39 @@
+Detecting eno1 IPs...
+Cluster IPs on eno1: 10.19.95.189,10.19.83.190
+2026-01-14 04:28:09.453916: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1768364889.468252   13820 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1768364889.472843   13820 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1768364889.483836   13820 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364889.483856   13820 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364889.483858   13820 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364889.483860   13820 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-01-14 04:28:09.749287: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1768364889.763799   14008 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1768364889.768455   14008 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1768364889.779535   14008 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364889.779557   14008 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364889.779559   14008 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768364889.779561   14008 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+Rank 0 attempting to initialize Strategy...
+Rank 1 attempting to initialize Strategy...
+I0000 00:00:1768364892.206056   13820 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+I0000 00:00:1768364892.213948   13820 gpu_device.cc:2019] Created device /job:worker/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768364892.220770   13820 grpc_server_lib.cc:463] Started server with target: grpc://10.19.95.189:12345
+I0000 00:00:1768364892.223904   13820 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+I0000 00:00:1768364892.361053   14008 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+I0000 00:00:1768364892.369131   14008 gpu_device.cc:2019] Created device /job:worker/replica:0/task:1/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768364892.375862   14008 grpc_server_lib.cc:463] Started server with target: grpc://10.19.83.190:12345
+I0000 00:00:1768364892.378991   14008 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+Rank 0 strategy initialized!
+Rank 1 strategy initialized!
+node-01:13820:13947 [0] NCCL INFO Bootstrap: Using eno1:10.19.95.189<0>
+node-01:13820:13947 [0] NCCL INFO NCCL_COMM_ID set by environment to 10.19.95.189:12346
+Starting 1000 iterations...
+Iteration 0/1000 complete. Total elapsed: 27.73s
+Iteration 10/1000 complete. Total elapsed: 209.95s
+slurmstepd: error: *** JOB 265 ON node-01 CANCELLED AT 2026-01-14T04:33:12 ***
+slurmstepd: error: *** STEP 265.2 ON node-01 CANCELLED AT 2026-01-14T04:33:12 ***

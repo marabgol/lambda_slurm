@@ -1,0 +1,38 @@
+Master Node: node-01 at 10.19.90.112 (eno1)
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 1.
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/lambda/nfs/AIML/home/majid/ddp_example.py", line 55, in <module>
+[rank1]:     demo_basic()
+[rank1]:   File "/lambda/nfs/AIML/home/majid/ddp_example.py", line 31, in demo_basic
+[rank1]:     model = ToyModel().to(rank)
+[rank1]:   File "/usr/lib/python3/dist-packages/torch/nn/modules/module.py", line 1355, in to
+[rank1]:     return self._apply(convert)
+[rank1]:   File "/usr/lib/python3/dist-packages/torch/nn/modules/module.py", line 915, in _apply
+[rank1]:     module._apply(fn)
+[rank1]:   File "/usr/lib/python3/dist-packages/torch/nn/modules/module.py", line 942, in _apply
+[rank1]:     param_applied = fn(param)
+[rank1]:   File "/usr/lib/python3/dist-packages/torch/nn/modules/module.py", line 1341, in convert
+[rank1]:     return t.to(
+[rank1]: RuntimeError: CUDA error: invalid device ordinal
+[rank1]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank1]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank1]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+node-01:12663:12663 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:12663:12663 [0] NCCL INFO Bootstrap: Using eno1:10.19.90.112<0>
+node-01:12663:12663 [0] NCCL INFO cudaDriverVersion 12080
+node-01:12663:12663 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-01:12663:12663 [0] NCCL INFO Comm config Blocking set to 1
+[rank1]:[W115 00:37:01.068410908 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+node-01:12663:12704 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-01:12663:12704 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-01:12663:12704 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-01:12663:12704 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-01:12663:12704 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:12663:12704 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.90.112<0>
+node-01:12663:12704 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-01:12663:12704 [0] NCCL INFO Using network IBext_v10
+node-01:12663:12704 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-01:12663:12704 [0] NCCL INFO ncclCommInitRankConfig comm 0x6010a7d4eab0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xafb13f1a8f78a4b4 - Init START
+srun: error: node-02: task 1: Exited with exit code 1

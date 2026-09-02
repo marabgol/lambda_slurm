@@ -1,0 +1,12 @@
+--------------------------------------------------------------------------
+Open RTE was unable to open the hostfile:
+    node-[01-02]
+Check to make sure the path and filename are correct.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+An internal error has occurred in ORTE:
+
+[[26492,0],0] FORCE-TERMINATE AT (null):1 - error plm_slurm_module.c(475)
+
+This is something that should be reported to the developers.
+--------------------------------------------------------------------------

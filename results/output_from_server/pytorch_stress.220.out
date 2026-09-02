@@ -1,0 +1,93 @@
+Master Node: node-01 at 10.19.84.99 (eno1)
+Rank 0 starting stress test on GPU 0...
+Rank 1 starting stress test on GPU 0...
+Rank 0: Starting 1000 iterations of Compute + All-Reduce...
+Rank 1: Starting 1000 iterations of Compute + All-Reduce...
+node-01:11091:11091 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:11091:11091 [0] NCCL INFO Bootstrap: Using eno1:10.19.84.99<0>
+node-01:11091:11091 [0] NCCL INFO cudaDriverVersion 12080
+node-01:11091:11091 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-01:11091:11091 [0] NCCL INFO Comm config Blocking set to 1
+node-02:9353:9353 [0] NCCL INFO cudaDriverVersion 12080
+node-02:9353:9353 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:9353:9353 [0] NCCL INFO Bootstrap: Using eno1:10.19.89.22<0>
+node-02:9353:9353 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-02:9353:9353 [0] NCCL INFO Comm config Blocking set to 1
+node-02:9353:9393 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-02:9353:9393 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-02:9353:9393 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-02:9353:9393 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-02:9353:9393 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:9353:9393 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.89.22<0>
+node-02:9353:9393 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-02:9353:9393 [0] NCCL INFO Using network IBext_v10
+node-02:9353:9393 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-02:9353:9393 [0] NCCL INFO ncclCommInitRankConfig comm 0x5e71bdcb1cc0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xf8d6a386546d859a - Init START
+node-01:11091:11138 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-01:11091:11138 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-01:11091:11138 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-01:11091:11138 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-01:11091:11138 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:11091:11138 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.84.99<0>
+node-01:11091:11138 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-01:11091:11138 [0] NCCL INFO Using network IBext_v10
+node-01:11091:11138 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-01:11091:11138 [0] NCCL INFO ncclCommInitRankConfig comm 0x5cc273aa9760 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xf8d6a386546d859a - Init START
+node-01:11091:11138 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-02:9353:9393 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-01:11091:11138 [0] NCCL INFO Bootstrap timings total 0.013809 (create 0.000034, send 0.000138, recv 0.000517, ring 0.000151, delay 0.000001)
+node-01:11091:11138 [0] NCCL INFO comm 0x5cc273aa9760 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-01:11091:11138 [0] NCCL INFO Channel 00/02 : 0 1
+node-01:11091:11138 [0] NCCL INFO Channel 01/02 : 0 1
+node-01:11091:11138 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+node-01:11091:11138 [0] NCCL INFO P2P Chunksize set to 131072
+node-01:11091:11138 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-01:11091:11141 [0] NCCL INFO [Proxy Service] Device 0 CPU core 26
+node-01:11091:11142 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 28
+node-02:9353:9393 [0] NCCL INFO Bootstrap timings total 0.052731 (create 0.000034, send 0.000281, recv 0.039222, ring 0.012347, delay 0.000000)
+node-01:11091:11138 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-01:11091:11138 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-01:11091:11138 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:11091:11138 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-01:11091:11138 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-01:11091:11138 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-01:11091:11138 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-01:11091:11138 [0] NCCL INFO ncclCommInitRankConfig comm 0x5cc273aa9760 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xf8d6a386546d859a - Init COMPLETE
+node-01:11091:11138 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 1.11 (kernels 1.00, alloc 0.08, bootstrap 0.01, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+node-02:9353:9393 [0] NCCL INFO comm 0x5e71bdcb1cc0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-02:9353:9393 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+node-02:9353:9393 [0] NCCL INFO P2P Chunksize set to 131072
+node-02:9353:9397 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 10
+node-02:9353:9396 [0] NCCL INFO [Proxy Service] Device 0 CPU core 9
+node-02:9353:9393 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-02:9353:9393 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-02:9353:9393 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-02:9353:9393 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-02:9353:9393 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-02:9353:9393 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-02:9353:9393 [0] NCCL INFO ncclCommInitRankConfig comm 0x5e71bdcb1cc0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xf8d6a386546d859a - Init COMPLETE
+node-02:9353:9393 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 1.11 (kernels 0.97, alloc 0.07, bootstrap 0.05, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+node-01:11091:11144 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 15
+node-01:11091:11143 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/IBext_v10/1
+node-01:11091:11143 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/IBext_v10/1
+node-01:11091:11143 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IBext_v10/1
+node-01:11091:11143 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IBext_v10/1
+node-02:9353:9399 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 13
+node-02:9353:9398 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/IBext_v10/1
+node-02:9353:9398 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/IBext_v10/1
+node-02:9353:9398 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/IBext_v10/1
+node-02:9353:9398 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/IBext_v10/1
+node-01:11091:11143 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+Rank 0: Iteration 0/1000 complete. Total elapsed: 1.30s
+node-02:9353:9398 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+Rank 1: Iteration 0/1000 complete. Total elapsed: 1.30s
+Rank 0: Iteration 50/1000 complete. Total elapsed: 545.49s
+Rank 1: Iteration 50/1000 complete. Total elapsed: 545.49s
+Rank 0: Iteration 100/1000 complete. Total elapsed: 1090.10s
+Rank 1: Iteration 100/1000 complete. Total elapsed: 1090.11s
+Rank 0: Iteration 150/1000 complete. Total elapsed: 1634.44s
+Rank 1: Iteration 150/1000 complete. Total elapsed: 1634.45s
+Rank 0: Iteration 200/1000 complete. Total elapsed: 2178.54s
+Rank 1: Iteration 200/1000 complete. Total elapsed: 2178.55s
+slurmstepd: error: *** STEP 220.1 ON node-01 CANCELLED AT 2026-01-05T03:15:15 ***
+slurmstepd: error: *** JOB 220 ON node-01 CANCELLED AT 2026-01-05T03:15:15 ***

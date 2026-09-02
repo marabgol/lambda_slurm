@@ -1,0 +1,63 @@
+Detecting eno1 IPs...
+Cluster IPs on eno1: 10.19.95.189,10.19.83.190
+2026-01-14 04:38:38.141343: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1768365518.155988   15113 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1768365518.160691   15113 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1768365518.171802   15113 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768365518.171823   15113 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768365518.171825   15113 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768365518.171826   15113 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-01-14 04:38:38.235190: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1768365518.250045   15874 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1768365518.254815   15874 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1768365518.266174   15874 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768365518.266194   15874 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768365518.266196   15874 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1768365518.266198   15874 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+Rank 0 initializing on eno1 IP: 10.19.95.189
+Rank 1 initializing on eno1 IP: 10.19.83.190
+I0000 00:00:1768365520.793484   15113 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+I0000 00:00:1768365520.801414   15113 gpu_device.cc:2019] Created device /job:worker/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768365520.807861   15113 grpc_server_lib.cc:463] Started server with target: grpc://10.19.95.189:12345
+I0000 00:00:1768365520.810969   15113 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+I0000 00:00:1768365520.840365   15874 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+I0000 00:00:1768365520.848075   15874 gpu_device.cc:2019] Created device /job:worker/replica:0/task:1/device:GPU:0 with 20829 MB memory:  -> device: 0, name: NVIDIA A10, pci bus id: 0000:07:00.0, compute capability: 8.6
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1768365520.854817   15874 grpc_server_lib.cc:463] Started server with target: grpc://10.19.83.190:12345
+I0000 00:00:1768365520.859319   15874 coordination_service_agent.cc:369] Coordination agent has successfully connected.
+node-01:15113:15244 [0] NCCL INFO Bootstrap: Using eno1:10.19.95.189<0>
+node-01:15113:15244 [0] NCCL INFO NCCL_COMM_ID set by environment to 10.19.95.189:12346
+Starting 1000 iterations on eno1 RoCE fabric...
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_5.py", line 46, in <module>
+    res = stress_step(variable)
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/tmp/__autograph_generated_file_p1zt9iy.py", line 13, in tf__stress_step
+    retval_ = ag__.converted_call(ag__.ld(strategy).reduce, (ag__.ld(tf).distribute.ReduceOp.SUM, ag__.ld(v)), dict(axis=None), fscope)
+AssertionError: in user code:
+
+    File "/lambda/nfs/AIML/home/majid/dist_stress_tf_5.py", line 38, in stress_step  *
+        return strategy.reduce(tf.distribute.ReduceOp.SUM, v, axis=None)
+
+    AssertionError: 
+
+2026-01-14 04:38:45.659681: E tensorflow/core/common_runtime/base_collective_executor.cc:248] BaseCollectiveExecutor::StartAbort UNAVAILABLE: Socket closed
+Additional GRPC error information from remote target /job:worker/replica:0/task:0 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1768365525.659449265","description":"Error received from peer ipv4:10.19.95.189:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Socket closed","grpc_status":14}
+Traceback (most recent call last):
+  File "/lambda/nfs/AIML/home/majid/dist_stress_tf_5.py", line 31, in <module>
+    variable = tf.Variable(tf.random.normal([20480, 20480]))
+  File "/usr/lib/python3/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/lib/python3/dist-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.UnavailableError: {{function_node __wrapped__CollectiveBcastRecv_device_/job:worker/replica:0/task:1/device:GPU:0}} Collective ops is aborted by: Socket closed
+Additional GRPC error information from remote target /job:worker/replica:0/task:0 while calling /tensorflow.WorkerService/RecvBuf:
+:{"created":"@1768365525.659449265","description":"Error received from peer ipv4:10.19.95.189:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Socket closed","grpc_status":14}
+The error could be from a previous operation. Restart your program to reset. [Op:CollectiveBcastRecv]
+srun: error: node-01: task 0: Exited with exit code 1
+srun: error: node-02: task 1: Exited with exit code 1

@@ -1,0 +1,26 @@
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 268435456 step: 100(bytes) warmup iters: 1 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 268435456 step: 100(bytes) warmup iters: 1 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  13913 on    node-02 device  0 [0000:07:00] NVIDIA A10
+node-02:13913:13913 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wk0
+
+[2025-12-30 00:35:40] node-02:13913:13913 [0] bootstrap.cc:112 NCCL WARN Bootstrap : no socket interface found
+node-02:13913:13913 [0] NCCL INFO init.cc:74 -> 5
+node-02:13913:13913 [0] NCCL INFO init.cc:94 -> 5
+node-02: Test NCCL failure common.cu:1196 'invalid usage (run with NCCL_DEBUG=WARN for details) / '
+ .. node-02 pid 13913: Test failure common.cu:1100
+#  Rank  0 Group  0 Pid  12791 on    node-01 device  0 [0000:07:00] NVIDIA A10
+node-01:12791:12791 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wk0
+
+[2025-12-30 00:35:40] node-01:12791:12791 [0] bootstrap.cc:112 NCCL WARN Bootstrap : no socket interface found
+node-01:12791:12791 [0] NCCL INFO init.cc:74 -> 5
+node-01:12791:12791 [0] NCCL INFO init.cc:94 -> 5
+node-01: Test NCCL failure common.cu:1196 'invalid usage (run with NCCL_DEBUG=WARN for details) / '
+ .. node-01 pid 12791: Test failure common.cu:1100

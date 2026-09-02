@@ -1,0 +1,234 @@
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 536870912 step: 2(factor) warmup iters: 1 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 536870912 step: 2(factor) warmup iters: 1 iters: 20 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  13744 on    node-01 device  0 [0000:07:00] NVIDIA A10
+node-01:13744:13744 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-01:13744:13744 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.3<0>
+#  Rank  0 Group  0 Pid  16397 on    node-02 device  0 [0000:07:00] NVIDIA A10
+node-02:16397:16397 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-02:16397:16397 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.4<0>
+node-01:13744:13744 [0] NCCL INFO cudaDriverVersion 12080
+node-02:16397:16397 [0] NCCL INFO cudaDriverVersion 12080
+node-01:13744:13744 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-02:16397:16397 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-02:16397:16404 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-02:16397:16404 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-02:16397:16404 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-02:16397:16404 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-02:16397:16404 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-01:13744:13752 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v10 (v10)
+node-01:13744:13752 [0] NCCL INFO NET/Plugin: Loaded collnet plugin NCCL RDMA Plugin v10 (v10)
+node-01:13744:13752 [0] NCCL INFO Plugin Path : /usr/local/lib/libnccl-net.so
+node-01:13744:13752 [0] NCCL INFO P2P plugin v10 IBext_v10
+node-01:13744:13752 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to wg0
+node-02:16397:16404 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB wg0:192.168.37.4<0>
+node-02:16397:16404 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-02:16397:16404 [0] NCCL INFO Using network IBext_v10
+node-01:13744:13752 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB wg0:192.168.37.3<0>
+node-01:13744:13752 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-01:13744:13752 [0] NCCL INFO Using network IBext_v10
+node-02:16397:16404 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-02:16397:16404 [0] NCCL INFO ncclCommInitRankConfig comm 0x63aea0df6bd0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0x9d7ddd051ced36f8 - Init START
+node-02:16397:16404 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-02:16397:16404 [0] NCCL INFO Bootstrap timings total 0.000469 (create 0.000024, send 0.000104, recv 0.000124, ring 0.000001, delay 0.000000)
+node-01:13744:13752 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-01:13744:13752 [0] NCCL INFO ncclCommInitRankConfig comm 0x5b5d70b33c30 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0xa80162d2955df83d - Init START
+node-01:13744:13752 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-01:13744:13752 [0] NCCL INFO Bootstrap timings total 0.000552 (create 0.000029, send 0.000101, recv 0.000164, ring 0.000001, delay 0.000000)
+node-02:16397:16404 [0] NCCL INFO comm 0x63aea0df6bd0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+node-02:16397:16404 [0] NCCL INFO Channel 00/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 01/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 02/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 03/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 04/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 05/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 06/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 07/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 08/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 09/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 10/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 11/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 12/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 13/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 14/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 15/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 16/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 17/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 18/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 19/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 20/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 21/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 22/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 23/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 24/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 25/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 26/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 27/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 28/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 29/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 30/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 31/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 32/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 33/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 34/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 35/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 36/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 37/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 38/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 39/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 40/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 41/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 42/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 43/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 44/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 45/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 46/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 47/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 48/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 49/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 50/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 51/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 52/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 53/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 54/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 55/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 56/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 57/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 58/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 59/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 60/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 61/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 62/64 : 0
+node-02:16397:16404 [0] NCCL INFO Channel 63/64 : 0
+node-01:13744:13752 [0] NCCL INFO comm 0x5b5d70b33c30 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+node-01:13744:13752 [0] NCCL INFO Channel 00/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 01/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 02/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 03/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 04/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 05/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 06/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 07/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 08/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 09/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 10/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 11/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 12/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 13/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 14/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 15/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 16/64 : 0
+node-02:16397:16404 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1 [32] -1/-1/-1->0->-1 [33] -1/-1/-1->0->-1 [34] -1/-1/-1->0->-1 [35] -1/-1/-1->0->-1 [36] -1/-1/-1->0->-1 [37] -1/-1/-1->0->-1 [38] -1/-1/-1->0->-1 [39] -1/-1/-1->0->-1 [40] -1/-1/-1->0->-1 [41] -1/-1/-1->0->-1 [42] -1/-1/-1->0->-1 [43] -1/-1/-1->0->-1 [44] -1/-1/-1->0->-1 [45] -1/-1/-1->0->-1 [46] -1/-1/-1->0->-1 [47] -
+node-01:13744:13752 [0] NCCL INFO Channel 17/64 : 0
+node-02:16397:16404 [0] NCCL INFO P2P Chunksize set to 524288
+node-02:16397:16404 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-01:13744:13752 [0] NCCL INFO Channel 18/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 19/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 20/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 21/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 22/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 23/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 24/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 25/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 26/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 27/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 28/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 29/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 30/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 31/64 : 0
+node-02:16397:16407 [0] NCCL INFO [Proxy Service] Device 0 CPU core 27
+node-02:16397:16408 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 25
+node-01:13744:13752 [0] NCCL INFO Channel 32/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 33/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 34/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 35/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 36/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 37/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 38/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 39/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 40/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 41/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 42/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 43/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 44/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 45/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 46/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 47/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 48/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 49/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 50/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 51/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 52/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 53/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 54/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 55/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 56/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 57/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 58/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 59/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 60/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 61/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 62/64 : 0
+node-01:13744:13752 [0] NCCL INFO Channel 63/64 : 0
+node-01:13744:13752 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1 [32] -1/-1/-1->0->-1 [33] -1/-1/-1->0->-1 [34] -1/-1/-1->0->-1 [35] -1/-1/-1->0->-1 [36] -1/-1/-1->0->-1 [37] -1/-1/-1->0->-1 [38] -1/-1/-1->0->-1 [39] -1/-1/-1->0->-1 [40] -1/-1/-1->0->-1 [41] -1/-1/-1->0->-1 [42] -1/-1/-1->0->-1 [43] -1/-1/-1->0->-1 [44] -1/-1/-1->0->-1 [45] -1/-1/-1->0->-1 [46] -1/-1/-1->0->-1 [47] -
+node-01:13744:13752 [0] NCCL INFO P2P Chunksize set to 524288
+node-01:13744:13752 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-01:13744:13756 [0] NCCL INFO [Proxy Service] Device 0 CPU core 27
+node-01:13744:13757 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 26
+node-02:16397:16404 [0] NCCL INFO 64 coll channels, 64 collnet channels, 0 nvls channels, 64 p2p channels, 64 p2p channels per peer
+node-02:16397:16404 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:13744:13752 [0] NCCL INFO 64 coll channels, 64 collnet channels, 0 nvls channels, 64 p2p channels, 64 p2p channels per peer
+node-01:13744:13752 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:13744:13752 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-01:13744:13752 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-01:13744:13752 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-01:13744:13752 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-01:13744:13752 [0] NCCL INFO ncclCommInitRankConfig comm 0x5b5d70b33c30 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0xa80162d2955df83d - Init COMPLETE
+node-01:13744:13752 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 1 total 0.19 (kernels 0.11, alloc 0.06, bootstrap 0.00, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.01, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong 
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)         
+node-02:16397:16404 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-02:16397:16404 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v4 symbol.
+node-02:16397:16404 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v3 symbol.
+node-02:16397:16404 [0] NCCL INFO TUNER/Plugin: Failed to find ncclTunerPlugin_v2 symbol, using internal tuner instead.
+node-02:16397:16404 [0] NCCL INFO ncclCommInitRankConfig comm 0x63aea0df6bd0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 7000 commId 0x9d7ddd051ced36f8 - Init COMPLETE
+node-02:16397:16404 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 1 total 0.18 (kernels 0.11, alloc 0.06, bootstrap 0.00, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.01, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong 
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)         
+     8388608       2097152     float     sum      -1    37.07  226.30    0.00       0     0.16   52168    0.00       0
+     8388608       2097152     float     sum      -1    37.00  226.70    0.00       0     0.16   51026    0.00       0
+    16777216       4194304     float     sum      -1    71.66  234.12    0.00       0     0.16  102082    0.00       0
+    16777216       4194304     float     sum      -1    71.95  233.16    0.00       0     0.17   99983    0.00       0
+    33554432       8388608     float     sum      -1   141.33  237.42    0.00       0     0.17  200505    0.00       0
+    33554432       8388608     float     sum      -1   141.20  237.64    0.00       0     0.17  203053    0.00       0
+    67108864      16777216     float     sum      -1   279.16  240.39    0.00       0     0.17  386683    0.00       0
+    67108864      16777216     float     sum      -1   279.17  240.39    0.00       0     0.18  377865    0.00       0
+   134217728      33554432     float     sum      -1   555.29  241.71    0.00       0     0.17  797491    0.00       0
+   134217728      33554432     float     sum      -1   555.65  241.55    0.00       0     0.17  770702    0.00       0
+   268435456      67108864     float     sum      -1  1108.80  242.09    0.00       0     0.17   2e+06    0.00       0
+   268435456      67108864     float     sum      -1  1108.24  242.22    0.00       0     0.18   1e+06    0.00       0
+   536870912     134217728     float     sum      -1  2217.41  242.12    0.00       0     0.18   3e+06    0.00       0
+   536870912     134217728     float     sum      -1  2218.19  242.03    0.00       0     0.18   3e+06    0.00       0
+node-02:16397:16409 [0] NCCL INFO comm 0x63aea0df6bd0 rank 0 nranks 1 cudaDev 0 busId 7000 - Destroy COMPLETE
+node-01:13744:13758 [0] NCCL INFO comm 0x5b5d70b33c30 rank 0 nranks 1 cudaDev 0 busId 7000 - Destroy COMPLETE
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0 
+#
+# Collective test concluded: all_reduce_perf
+
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0 
+#
+# Collective test concluded: all_reduce_perf
+

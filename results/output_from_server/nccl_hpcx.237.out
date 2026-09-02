@@ -1,0 +1,80 @@
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+[LOG_CAT_SBGP] libnuma.so: cannot open shared object file: No such file or directory
+[LOG_CAT_SBGP] Failed to dlopen libnuma.so. Fallback to GROUP_BY_SOCKET manual.
+# nccl-tests version 2.17.6 nccl-headers=22602 nccl-library=22602
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8388608 maxBytes 17179869184 step: 1048576(bytes) warmup iters: 20 iters: 5 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  12392 on    node-01 device  0 [0000:07:00] NVIDIA A100-SXM4-40GB
+#  Rank  1 Group  0 Pid   8263 on    node-02 device  0 [0000:07:00] NVIDIA A100-SXM4-40GB
+#
+# Reducing maxBytes to 12703629312 due to memory limitation
+node-01:12392:12392 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.3<0>
+node-01:12392:12392 [0] NCCL INFO NCCL_COMM_ID set by environment to 192.168.37.3:12345
+node-01:12392:12392 [0] NCCL INFO cudaDriverVersion 13000
+node-02:8263:8263 [0] NCCL INFO cudaDriverVersion 13000
+node-01:12392:12392 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-01:12392:12392 [0] NCCL INFO NCCL_COMM_ID set by environment to 192.168.37.3:12345
+node-02:8263:8263 [0] NCCL INFO Bootstrap: Using wg0:192.168.37.4<0>
+node-02:8263:8263 [0] NCCL INFO NCCL version 2.26.2+cuda12.8
+node-01:12392:12429 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net-none.so. Using internal net plugin.
+node-01:12392:12429 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+node-01:12392:12429 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:12392:12429 [0] NCCL INFO NET/Socket : Using [0]eno1:10.19.82.122<0>
+node-01:12392:12429 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-01:12392:12429 [0] NCCL INFO Using network Socket
+node-01:12392:12429 [0] NCCL INFO ncclCommInitRankConfig comm 0x5e549ce90e40 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xcfd539ee752d9a8d - Init START
+node-02:8263:8299 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net-none.so. Using internal net plugin.
+node-02:8263:8299 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+node-02:8263:8299 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:8263:8299 [0] NCCL INFO NET/Socket : Using [0]eno1:10.19.81.214<0>
+node-02:8263:8299 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+node-02:8263:8299 [0] NCCL INFO Using network Socket
+node-02:8263:8299 [0] NCCL INFO ncclCommInitRankConfig comm 0x578840225d00 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xcfd539ee752d9a8d - Init START
+node-01:12392:12429 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-02:8263:8299 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+node-02:8263:8299 [0] NCCL INFO Bootstrap timings total 0.083879 (create 0.000052, send 0.016580, recv 0.033934, ring 0.016656, delay 0.000000)
+node-01:12392:12429 [0] NCCL INFO Bootstrap timings total 0.361092 (create 0.000046, send 0.000806, recv 0.292865, ring 0.017328, delay 0.000001)
+node-01:12392:12429 [0] NCCL INFO comm 0x5e549ce90e40 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-01:12392:12429 [0] NCCL INFO Channel 00/02 : 0 1
+node-01:12392:12429 [0] NCCL INFO Channel 01/02 : 0 1
+node-01:12392:12429 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+node-01:12392:12429 [0] NCCL INFO P2P Chunksize set to 131072
+node-01:12392:12429 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+node-02:8263:8299 [0] NCCL INFO comm 0x578840225d00 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-02:8263:8299 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+node-02:8263:8299 [0] NCCL INFO P2P Chunksize set to 131072
+node-01:12392:12431 [0] NCCL INFO [Proxy Service] Device 0 CPU core 89
+node-01:12392:12432 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 90
+node-02:8263:8301 [0] NCCL INFO [Proxy Service] Device 0 CPU core 98
+node-02:8263:8302 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 99
+node-01:12392:12429 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-01:12392:12429 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-02:8263:8299 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-02:8263:8299 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+node-01:12392:12429 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:12392:12429 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-01:12392:12429 [0] NCCL INFO ncclCommInitRankConfig comm 0x5e549ce90e40 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xcfd539ee752d9a8d - Init COMPLETE
+node-01:12392:12429 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.68 (kernels 0.15, alloc 0.12, bootstrap 0.36, allgathers 0.03, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong 
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)         
+node-02:8263:8299 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+node-02:8263:8299 [0] NCCL INFO ncclCommInitRankConfig comm 0x578840225d00 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xcfd539ee752d9a8d - Init COMPLETE
+node-02:8263:8299 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.67 (kernels 0.19, alloc 0.35, bootstrap 0.08, allgathers 0.03, topo 0.01, graphs 0.00, connections 0.00, rest 0.01)
+node-01:12392:12435 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 101
+node-01:12392:12434 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+node-01:12392:12434 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+node-01:12392:12434 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+node-01:12392:12434 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+node-02:8263:8304 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 2
+node-02:8263:8303 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+node-02:8263:8303 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+node-02:8263:8303 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+node-02:8263:8303 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+node-01:12392:12434 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+node-02:8263:8303 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+slurmstepd: error: *** JOB 237 ON node-01 CANCELLED AT 2026-01-09T17:08:51 ***

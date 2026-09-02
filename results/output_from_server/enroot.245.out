@@ -1,0 +1,12 @@
+[INFO] Extracting squashfs filesystem...
+Parallel unsquashfs: Using 1 processor
+422 inodes (478 blocks) to write
+
+
+created 87 files
+created 98 directories
+created 335 symlinks
+created 0 devices
+created 0 fifos
+created 0 sockets
+/etc/rc: exec: line 9: nvidia-smi: not found

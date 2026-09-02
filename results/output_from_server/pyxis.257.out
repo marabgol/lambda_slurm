@@ -1,0 +1,4 @@
+--- Step 1: Check Hostnames from inside the container ---
+--- Step 2: Verify OS inside container (Should be Alpine) ---
+--- Step 3: Verify Mounts (Should see your home directory) ---
+--- Step 4: Verify Architecture (Should be x86_64 on workers) ---

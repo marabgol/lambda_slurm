@@ -1,0 +1,6 @@
+srun: error: node-01: task 0: Exited with exit code 127
+0: Host: node-01 | Rank: 0 | Interface: wg0 | Master: 192.168.37.3
+0: /usr/bin/bash: line 8: -b: command not found
+1: Host: node-02 | Rank: 1 | Interface: wg0 | Master: 192.168.37.3
+1: /usr/bin/bash: line 8: -b: command not found
+srun: error: node-02: task 1: Exited with exit code 127

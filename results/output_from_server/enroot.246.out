@@ -1,0 +1,67 @@
+[INFO] Querying registry for permission grant
+[INFO] Authenticating with user: <anonymous>
+[INFO] Authentication succeeded
+[INFO] Fetching image manifest list
+[INFO] Fetching image manifest
+[INFO] Downloading 5 missing layers...
+[INFO] Extracting image layers...
+[INFO] Converting whiteouts...
+[INFO] Creating squashfs filesystem...
+Parallel mksquashfs: Using 1 processor
+Creating 4.0 filesystem on /lambda/nfs/AIML/home/majid/cuda-base.sqsh, block size 131072.
+
+Exportable Squashfs 4.0 filesystem, lzo compressed, data block size 131072
+	uncompressed data, compressed metadata, compressed fragments,
+	compressed xattrs, compressed ids
+	duplicates are removed
+Filesystem size 208872.60 Kbytes (203.98 Mbytes)
+	90.69% of uncompressed filesystem size (230322.98 Kbytes)
+Inode table size 55599 bytes (54.30 Kbytes)
+	34.80% of uncompressed inode table size (159750 bytes)
+Directory table size 47202 bytes (46.10 Kbytes)
+	49.76% of uncompressed directory table size (94863 bytes)
+Number of duplicate files found 174
+Number of inodes 4344
+Number of files 3048
+Number of fragments 300
+Number of symbolic links 547
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 749
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)
+[INFO] Extracting squashfs filesystem...
+Parallel unsquashfs: Using 1 processor
+3597 inodes (5065 blocks) to write
+
+
+created 3048 files
+created 749 directories
+created 547 symlinks
+created 0 devices
+created 0 fifos
+created 0 sockets
+Tue Jan 13 02:38:08 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A10                     On  |   00000000:07:00.0 Off |                    0 |
+|  0%   25C    P8             10W /  150W |       0MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
