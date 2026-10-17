@@ -22,3 +22,6 @@ getting that setup working end to end.
 
 Still a work in progress — I'm using this to learn multi-node GPU communication
 and Slurm administration hands-on.
+
+- **Note:** A personal lab to learn Slurm, GPU nodes, and NCCL benchmarking on a hybrid cluster (controller VM at home, GPU workers on Lambda Cloud). I used an AI assistant as a learning and troubleshooting aid. I tested, debugged, and maintain everything here myself.
+
