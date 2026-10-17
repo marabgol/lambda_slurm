@@ -15,7 +15,7 @@ getting that setup working end to end.
 
 ## Setup
 
-- **Controller:** Slurm 24.11.7 in a local VM (`head-slurm`)
+- **Controller:** Slurm 26.05.4 in a local VM (`head-slurm`)
 - **Workers:** Lambda Cloud NVIDIA GPU instances
 - **Containers:** enroot + pyxis
 - **Transports compared:** VPN tunnel, MPI over TCP, and HPC-X with RDMA
