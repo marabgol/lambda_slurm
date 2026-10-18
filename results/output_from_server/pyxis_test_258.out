@@ -1,4 +1,0 @@
---- Step 1: Check Hostnames from inside the container ---
-node-01
---- Step 2: Verify OS inside container ---
-PRETTY_NAME="Alpine Linux v3.23"

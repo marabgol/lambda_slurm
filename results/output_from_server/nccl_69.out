@@ -1,6 +1,0 @@
-Running on nodes:
-node-01
-node-02
-Using interface: eno1
-Binary:
--rwxrwxr-x 1 ubuntu ubuntu 30356048 Dec 21 15:12 /lambda/nfs/AIML/nccl-tests/build/all_reduce_perf

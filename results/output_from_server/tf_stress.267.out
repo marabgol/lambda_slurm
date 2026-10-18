@@ -1,6 +1,0 @@
-Detecting eno1 IPs...
-Cluster IPs on eno1: 10.19.95.189,10.19.83.190
-/usr/bin/python3: can't open file '/lambda/nfs/AIML/home/majid/dist_stress_tf_5.py': [Errno 2] No such file or directory
-srun: error: node-01: task 0: Exited with exit code 2
-/usr/bin/python3: can't open file '/lambda/nfs/AIML/home/majid/dist_stress_tf_5.py': [Errno 2] No such file or directory
-srun: error: node-02: task 1: Exited with exit code 2

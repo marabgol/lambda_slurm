@@ -1,2 +1,0 @@
-Total Ranks: 1 (4 ranks sharing 1 GPU per node)
-/var/spool/slurm/d/job00235/slurm_script: line 34: mpirun: command not found
