@@ -7,7 +7,6 @@ the controller runs in a VM on my laptop, with NVIDIA GPU worker nodes on Lambda
 This repo holds the Slurm configuration, job scripts, and benchmark output from
 getting that setup working end to end.
 
-## Contents
 
 ## Contents
 
@@ -37,5 +36,5 @@ and Slurm administration hands-on.
 
 ## About this project
 
-I used an AI assistant as a learning and troubleshooting aid while building this lab.
-I tested, debugged, and maintain everything here myself.
+Hybrid Slurm lab: local controller, GPU workers on Lambda Cloud. NCCL and HPL benchmarks over RoCE and NVLink.
+
