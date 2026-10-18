@@ -36,5 +36,6 @@ and Slurm administration hands-on.
 
 ## About this project
 
-Hybrid Slurm lab: local controller, GPU workers on Lambda Cloud. NCCL and HPL benchmarks over RoCE and NVLink.
+-I used an AI assistant as a learning and troubleshooting aid while building this lab.
+-I tested, debugged, and maintain everything here myself.
 
