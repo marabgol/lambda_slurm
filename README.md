@@ -9,11 +9,13 @@ getting that setup working end to end.
 
 ## Contents
 
+## Contents
+
 - `config/` — Slurm configuration (`slurm.conf`, `gres.conf`, `cgroup.conf`, pyxis/enroot plugstack)
-- `scripts/` — Slurm batch scripts for NCCL all-reduce, reduce-scatter, and PyTorch DDP
-- `results/selected` — raw job output from benchmark runs
-- `RESULTS.md` — HPL benchmark results across A10, A100, and H100 GPUs, comparing RoCE and NVLink
-- `scripts/hpl/` — HPL run script (2× A10 over RoCE, via Slurm + pyxis) and input files
+- `scripts/nccl_container_test.sh` — NCCL tests in the NVIDIA HPC benchmarks container (Pyxis/Enroot)
+- `scripts/hpl/` — HPL run script and input files
+- `results/2026-10-18_2xA10_roce/` — latest clean results (NCCL default vs 16 channels, HPL) and test environment
+- `RESULTS.md` — full HPL analysis across A10, A100 and H100, RoCE vs NVLink
 
 ## Setup
 
