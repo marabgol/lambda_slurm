@@ -1,0 +1,208 @@
+# nccl-tests version 2.21.1 (afd59ab) nccl-headers=22902 nccl-library=22902
+# Collective test starting: all_reduce_perf
+# nThread 1 nGpus 1 minBytes 8 maxBytes 1073741824 step: 2(factor) warmup iters: 1 iters: 20 agg iters: 1 validation: 1 graph: 0 unalign: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid  39411 on    node-01 device  0 [0000:07:00] NVIDIA A10
+#  Rank  1 Group  0 Pid  19809 on    node-02 device  0 [0000:07:00] NVIDIA A10
+node-01:39411:39411 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+node-01:39411:39411 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:39411:39411 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno1
+node-01:39411:39411 [0] NCCL INFO cudaDriverVersion 13010
+node-01:39411:39411 [0] NCCL INFO NCCL version 2.29.2+cuda13.1
+node-01:39411:39411 [0] NCCL INFO NCCL git version stable 07fa371c7
+node-01:39411:39411 [0] NCCL INFO Comm config nvlinkCentricSched set to 1
+node-01:39411:39411 [0] NCCL INFO Comm config graphUsageMode set to 0
+node-02:19809:19809 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+node-02:19809:19809 [0] NCCL INFO cudaDriverVersion 13010
+node-02:19809:19809 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:19809:19809 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno1
+node-02:19809:19809 [0] NCCL INFO NCCL version 2.29.2+cuda13.1
+node-02:19809:19809 [0] NCCL INFO NCCL git version stable 07fa371c7
+node-02:19809:19809 [0] NCCL INFO Comm config nvlinkCentricSched set to 1
+node-02:19809:19809 [0] NCCL INFO Comm config graphUsageMode set to 0
+node-01:39411:39411 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v11 (v11)
+node-01:39411:39411 [0] NCCL INFO NET/Plugin: Loaded collnet plugin SHARP (v11)
+node-01:39411:39411 [0] NCCL INFO Successfully loaded external network plugin /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+node-01:39411:39411 [0] NCCL INFO Plugin Path : /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+node-01:39411:39411 [0] NCCL INFO P2P plugin v11 IBext_v11
+node-01:39411:39411 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-01:39411:39411 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno1
+node-01:39411:39411 [0] NCCL INFO NET/IB : Made virtual device [0] name=mlx5_0 speed=50000 ndevs=1
+node-01:39411:39411 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.94.70<0>
+node-01:39411:39411 [0] NCCL INFO Initialized NET plugin IBext_v11
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO Assigned NET plugin IBext_v11 to comm
+node-01:39411:39411 [0] NCCL INFO Using network IBext_v11
+node-01:39411:39411 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-01:39411:39411 [0] NCCL INFO [Rank 0] ncclCommInitRankConfig comm 0x625e547a7bc0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x15f5c1f3d4d28707 - Init START
+node-01:39411:39411 [0] NCCL INFO RAS client listening socket at ::1<28028>
+node-02:19809:19809 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v11 (v11)
+node-02:19809:19809 [0] NCCL INFO NET/Plugin: Loaded collnet plugin SHARP (v11)
+node-02:19809:19809 [0] NCCL INFO Successfully loaded external network plugin /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+node-02:19809:19809 [0] NCCL INFO Plugin Path : /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+node-02:19809:19809 [0] NCCL INFO P2P plugin v11 IBext_v11
+node-02:19809:19809 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno1
+node-02:19809:19809 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno1
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO NET/IBext_v11 : GPU Direct RDMA Enabled for HCA 0 'mlx5_0'
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO NET/IB : Made virtual device [0] name=mlx5_0 speed=50000 ndevs=1
+node-02:19809:19809 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB eno1:10.19.83.33<0>
+node-02:19809:19809 [0] NCCL INFO Initialized NET plugin IBext_v11
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO Assigned NET plugin IBext_v11 to comm
+node-02:19809:19809 [0] NCCL INFO Using network IBext_v11
+node-02:19809:19809 [0] NCCL INFO DMA-BUF is available on GPU device 0
+node-02:19809:19809 [0] NCCL INFO [Rank 1] ncclCommInitRankConfig comm 0x5d3a38f57120 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x15f5c1f3d4d28707 - Init START
+node-01:39411:39411 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is empty, ignoring. (GPU affinity =  ; CPU affinity = 12-27).
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO comm 0x625e547a7bc0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-01:39411:39411 [0] NCCL INFO Channel 00/02 : 0 1
+node-01:39411:39411 [0] NCCL INFO Channel 01/02 : 0 1
+node-01:39411:39411 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+node-01:39411:39411 [0] NCCL INFO P2P Chunksize set to 131072
+node-01:39411:39411 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+node-01:39411:39411 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+node-01:39411:39650 [0] NCCL INFO [Proxy Service] Device 0 CPU core 18
+node-01:39411:39651 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 20
+node-02:19809:19809 [0] NCCL INFO RAS client listening socket at ::1<28028>
+node-01:39411:39411 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+node-01:39411:39411 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-01:39411:39411 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+node-01:39411:39411 [0] NCCL INFO Symmetric memory is not supported. cuMemEnable 1, ginSupport 0, globalNicFused 0
+node-01:39411:39411 [0] NCCL INFO CC Off, workFifoBytes 1048576
+node-01:39411:39411 [0] NCCL INFO ncclCommInitRankConfig comm 0x625e547a7bc0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x15f5c1f3d4d28707 - Init COMPLETE
+node-01:39411:39411 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.16 (kernels 0.13, alloc 0.00, bootstrap 0.02, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO NET/IBext_v11 : GPU Direct RDMA Enabled for HCA 0 'mlx5_0'
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw  #wrong     time   algbw   busbw  #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)             (us)  (GB/s)  (GB/s)        
+node-02:19809:19809 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is empty, ignoring. (GPU affinity =  ; CPU affinity = 12-27).
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO comm 0x5d3a38f57120 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+node-02:19809:19809 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+node-02:19809:19809 [0] NCCL INFO P2P Chunksize set to 131072
+node-02:19809:19809 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+node-02:19809:19809 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+node-02:19809:20043 [0] NCCL INFO [Proxy Service] Device 0 CPU core 16
+node-02:19809:20044 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 18
+node-02:19809:19809 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+node-02:19809:19809 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+node-02:19809:19809 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+node-02:19809:19809 [0] NCCL INFO Symmetric memory is not supported. cuMemEnable 1, ginSupport 0, globalNicFused 0
+node-02:19809:19809 [0] NCCL INFO ncclCommInitRankConfig comm 0x5d3a38f57120 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0x15f5c1f3d4d28707 - Init COMPLETE
+node-02:19809:19809 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.16 (kernels 0.14, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+           8             2     float     sum      -1node-01:39411:39411 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 0) - NET/0-0 (distance 8 > 6)
+node-02:19809:19809 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 1) - NET/0-0 (distance 8 > 6)
+node-01:39411:39650 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+node-01:39411:39411 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x751a54000d20
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-01:39411:39652 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 21
+node-01:39411:39411 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/IBext_v11/0
+node-01:39411:39411 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 0) - NET/0-0 (distance 8 > 6)
+node-01:39411:39650 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+node-01:39411:39411 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x751a54000d98
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/IBext_v11/0
+node-01:39411:39411 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 0) - NET/0-0 (distance 8 > 6)
+node-01:39411:39650 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+node-01:39411:39411 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x751a54000e10
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IBext_v11/0
+node-01:39411:39411 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 0) - NET/0-0 (distance 8 > 6)
+node-01:39411:39650 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+node-01:39411:39411 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x751a54000e88
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-01:39411:39650 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-01:39411:39411 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IBext_v11/0
+node-01:39411:39650 [0] NCCL INFO NCCL_IB_GID_INDEX set by environment to 3.
+node-02:19809:20043 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+node-02:19809:19809 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77a514000d20
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:20045 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 19
+node-02:19809:19809 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/IBext_v11/0
+node-02:19809:19809 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 1) - NET/0-0 (distance 8 > 6)
+node-02:19809:20043 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+node-01:39411:39650 [0] NCCL INFO NET/IB: NCCL Dev 0 IbDev 0 Port 1 qpn 733 mtu 5 query_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0} GID 3 (0/465E130AFFFF0000) fifoRkey=0x70d00 fifoLkey=0x70d00
+node-02:19809:19809 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77a514000d98
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/IBext_v11/0
+node-02:19809:19809 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 1) - NET/0-0 (distance 8 > 6)
+node-02:19809:20043 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+node-02:19809:19809 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77a514000e10
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/IBext_v11/0
+node-02:19809:19809 [0] NCCL INFO GPU Direct RDMA Disabled for GPU/0-28672 (rank 1) - NET/0-0 (distance 8 > 6)
+node-02:19809:20043 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+node-02:19809:19809 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77a514000e88
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (nvidia-peermem) enabled for HCA 0 'mlx5_0
+node-02:19809:20043 [0] NCCL INFO NET/IB : GPU Direct RDMA (DMABUF) enabled for HCA 0 'mlx5_0
+node-02:19809:19809 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/IBext_v11/0
+node-02:19809:20043 [0] NCCL INFO NCCL_IB_GID_INDEX set by environment to 3.
+node-02:19809:20043 [0] NCCL INFO NET/IB: NCCL Dev 0 IbDev 0 Port 1 qpn 274 mtu 5 query_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0} GID 3 (0/2153130AFFFF0000) fifoRkey=0x31800 fifoLkey=0x31800
+node-01:39411:39650 [0] NCCL INFO NET/IB: NCCL Dev 0 IbDev 0 Port 1 qpn 736 mtu 5 query_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0} GID 3 (0/465E130AFFFF0000) fifoRkey=0x72a00 fifoLkey=0x72a00
+node-02:19809:20043 [0] NCCL INFO NET/IB: NCCL Dev 0 IbDev 0 Port 1 qpn 275 mtu 5 query_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0} GID 3 (0/2153130AFFFF0000) fifoRkey=0x31900 fifoLkey=0x31900
+node-02:19809:20043 [0] NCCL INFO NET/IB: IbDev 0 Port 1 qpn 731 set_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0}
+node-01:39411:39650 [0] NCCL INFO NET/IB: IbDev 0 Port 1 qpn 276 set_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0}
+node-02:19809:20043 [0] NCCL INFO NET/IB: IbDev 0 Port 1 qpn 734 set_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0}
+node-01:39411:39650 [0] NCCL INFO NET/IB: IbDev 0 Port 1 qpn 278 set_ece={supported=1, vendor_id=0x15b3, options=0x30000000, comp_mask=0x0}
+node-01:39411:39411 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+node-02:19809:19809 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+    76.89    0.00    0.00       0    75.43    0.00    0.00       0
+          16             4     float     sum      -1    75.20    0.00    0.00       0    75.17    0.00    0.00       0
+          32             8     float     sum      -1    78.60    0.00    0.00       0    76.25    0.00    0.00       0
+          64            16     float     sum      -1    76.68    0.00    0.00       0    76.90    0.00    0.00       0
+         128            32     float     sum      -1    77.89    0.00    0.00       0    76.43    0.00    0.00       0
+         256            64     float     sum      -1    76.86    0.00    0.00       0    76.84    0.00    0.00       0
+         512           128     float     sum      -1    76.90    0.01    0.01       0    76.50    0.01    0.01       0
+        1024           256     float     sum      -1    77.76    0.01    0.01       0    77.88    0.01    0.01       0
+        2048           512     float     sum      -1    80.49    0.03    0.03       0    79.46    0.03    0.03       0
+        4096          1024     float     sum      -1    82.34    0.05    0.05       0    82.50    0.05    0.05       0
+        8192          2048     float     sum      -1    92.87    0.09    0.09       0    93.00    0.09    0.09       0
+       16384          4096     float     sum      -1    94.57    0.17    0.17       0    94.63    0.17    0.17       0
+       32768          8192     float     sum      -1   138.92    0.24    0.24       0   128.23    0.26    0.26       0
+       65536         16384     float     sum      -1   187.18    0.35    0.35       0   194.36    0.34    0.34       0
+      131072         32768     float     sum      -1   327.69    0.40    0.40       0   318.46    0.41    0.41       0
+      262144         65536     float     sum      -1   321.54    0.82    0.82       0   322.18    0.81    0.81       0
+      524288        131072     float     sum      -1   574.58    0.91    0.91       0   574.31    0.91    0.91       0
+     1048576        262144     float     sum      -1  1070.79    0.98    0.98       0  1067.30    0.98    0.98       0
+     2097152        524288     float     sum      -1  2036.07    1.03    1.03       0  2030.33    1.03    1.03       0
+     4194304       1048576     float     sum      -1  3968.99    1.06    1.06       0  3967.77    1.06    1.06       0
+     8388608       2097152     float     sum      -1  7859.50    1.07    1.07       0  7866.73    1.07    1.07       0
+    16777216       4194304     float     sum      -1  15622.4    1.07    1.07       0  15572.2    1.08    1.08       0
+    33554432       8388608     float     sum      -1  31072.1    1.08    1.08       0  31053.0    1.08    1.08       0
+    67108864      16777216     float     sum      -1  61903.4    1.08    1.08       0  62035.0    1.08    1.08       0
+   134217728      33554432     float     sum      -1   123724    1.08    1.08       0   123734    1.08    1.08       0
+   268435456      67108864     float     sum      -1   247678    1.08    1.08       0   247389    1.09    1.09       0
+   536870912     134217728     float     sum      -1   495709    1.08    1.08       0   494669    1.09    1.09       0
+  1073741824     268435456     float     sum      -1   989541    1.09    1.09       0   988989    1.09    1.09       0
+node-01:39411:39411 [0] NCCL INFO comm 0x625e547a7bc0 rank 0 nranks 2 cudaDev 0 busId 7000 - Destroy COMPLETE
+node-01:39411:39411 [0] NCCL INFO Unloading plugin libnccl-net.so
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.528536 
+#
+# Collective test concluded: all_reduce_perf
+#
+node-02:19809:19809 [0] NCCL INFO comm 0x5d3a38f57120 rank 1 nranks 2 cudaDev 0 busId 7000 - Destroy COMPLETE
+node-02:19809:19809 [0] NCCL INFO Unloading plugin libnccl-net.so
+
+node-01:39411:39411 [0] NCCL INFO ENV/Plugin: Closing env plugin ncclEnvDefault
+node-02:19809:19809 [0] NCCL INFO ENV/Plugin: Closing env plugin ncclEnvDefault
