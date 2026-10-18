@@ -36,6 +36,6 @@ and Slurm administration hands-on.
 
 ## About this project
 
--I used an AI assistant as a learning and troubleshooting aid while building this lab.
--I tested, debugged, and maintain everything here myself.
+- I used an AI assistant as a learning and troubleshooting aid while building this lab.
+- I tested, debugged, and maintain everything here myself.
 
