@@ -12,8 +12,5 @@
 |---|---|---|
 | all_reduce | default (2) | 1.09 GB/s |
 | all_reduce | 16 | 2.77 GB/s |
-
-
-
 | HPL (N=45056, NB=1024, P=1, Q=2) | default (2) | 75.75 s, 805.0 Gflops total (402.5 per GPU), PASSED, ~96.7% of single-A10 |
 
