@@ -10,9 +10,8 @@ getting that setup working end to end.
 ## Contents
 
 - `config/` — Slurm configuration (`slurm.conf`, `gres.conf`, `cgroup.conf`, pyxis/enroot plugstack)
-- `config/history/` — earlier config iterations kept for reference
 - `scripts/` — Slurm batch scripts for NCCL all-reduce, reduce-scatter, and PyTorch DDP
-- `results/` — raw job output from benchmark runs
+- `results/selected` — raw job output from benchmark runs
 - `RESULTS.md` — HPL benchmark results across A10, A100, and H100 GPUs, comparing RoCE and NVLink
 - `scripts/hpl/` — HPL run script (2× A10 over RoCE, via Slurm + pyxis) and input files
 
