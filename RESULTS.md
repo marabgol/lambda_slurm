@@ -9,9 +9,9 @@ NB = 1024, all residual checks **PASSED**. Lambda Cloud on-demand instances, Oct
 
 | GPUs | Interconnect | Per-GPU HPL | 2-GPU efficiency |
 |---|---|---|---|
-| 2× A10, two nodes | RoCE v2, ~30 Gb/s delivered (~3.75 GB/s) | 0.42 TFLOPS | **95.8%** (strong) |
-| 2× A100 40GB, two nodes | same RoCE network | 16.1 TFLOPS | **25.5%** (strong), **36.4%** (weak) |
-| 2× H100 80GB, one node | NVLink 4, NV18 (~450 GB/s per direction) | 47.2 TFLOPS | **98.9%** (weak) |
+| 2× A10, two nodes | RoCE v2, ~30 Gb/s delivered (~3.75 GB/s) | 0.42 TFLOPS | **95.8%**  |
+| 2× A100 40GB, two nodes | same RoCE network | 16.1 TFLOPS | **25.5%** , **36.4%**  |
+| 2× H100 80GB, one node | NVLink 4, NV18 (~450 GB/s per direction) | 47.2 TFLOPS | **98.9%**  |
 
 On the same ~30 Gb/s RoCE network, two A10s scaled almost perfectly, but two A100s were slower together than one
 A100 alone: the A10's low FP64 throughput hid the communication time, while the A100 (~39× faster) exposed it.
